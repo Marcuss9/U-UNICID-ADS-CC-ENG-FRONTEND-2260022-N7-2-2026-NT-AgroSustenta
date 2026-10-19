@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hospedagem e domínio | AgroSustenta</title>
+<meta name="description" content="Comparativo de hospedagem, orçamento simulado e orientações para publicação estática no Railway e GitHub Pages.">
+<meta name="theme-color" content="#001d21">
+<link rel="icon" href="assets/simbolo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="header"><div class="wrap topbar">
+<a class="brand" href="index.html" aria-label="AgroSustenta, início"><img src="assets/simbolo.svg" alt="" width="30" height="30">AgroSustenta</a><span class="header-note">CONHECIMENTO QUE CULTIVA O FUTURO</span><a class="pill small" href="projetos.html">Explore o projeto <span aria-hidden="true">↗</span></a>
+</div>
+<nav class="wrap nav" aria-label="Menu principal"><a href="index.html">Início</a><a href="sobre.html">Sobre</a><a href="projetos.html">Projetos</a><a href="impacto.html">Impacto</a><a href="acessibilidade.html">Acessibilidade</a><a href="galeria.html">Galeria</a><a href="midia.html">Mídia</a><a href="noticias.html">Notícias</a><a href="contato.html">Contato</a><a href="orcamento_hospedagem.html" aria-current="page">Hospedagem</a></nav></header>
+<main id="conteudo" tabindex="-1"><section class="page-intro wrap"><p class="eyebrow">AGROSUSTENTA / 09 / COLOCAR NO AR</p>
+<h1>Uma base leve.<br><mark>Um alcance maior.</mark>
+</h1>
+<p class="lead">Hospedar com consciência também passa por evitar peso desnecessário e manter a informação acessível.</p></section><section class="section "><div class="wrap">
+<div class="section-head">
+<p class="eyebrow">COMPARATIVO</p>
+<h2>Onde o projeto<br>pode criar raízes.</h2>
+</div>
+<div class="table-scroll" role="region" aria-label="Comparação de opções de hospedagem" tabindex="0"><table>
+<caption>Condições consultadas em 19/10/2026 · conferir termos antes da contratação</caption>
+<thead><tr>
+<th scope="col">Opção</th>
+<th scope="col">Custo de referência</th>
+<th scope="col">Adequação</th>
+<th scope="col">Atenção</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row"><a href="https://pages.github.com/">GitHub Pages</a></th>
+<td>Disponível no GitHub Free para repositórios públicos</td>
+<td>Site HTML/CSS estático</td>
+<td>Este repositório é privado; conferir plano e elegibilidade antes de publicar.</td>
+</tr>
+<tr>
+<th scope="row"><a href="https://railway.com/pricing">Railway Hobby</a></th>
+<td>US$ 5/mês de uso mínimo, com crédito de uso incluído; excedentes à parte</td>
+<td>Servidor estático em contêiner</td>
+<td>Consumo, câmbio e impostos podem alterar o total.</td>
+</tr>
+<tr>
+<th scope="row">Hospedagem compartilhada genérica</th>
+<td>R$ 20/mês (simulado)</td>
+<td>Envio de arquivos HTML/CSS</td>
+<td>Não é cotação de um fornecedor. Verificar renovação e HTTPS.</td>
+</tr>
+<tr>
+<th scope="row"><a href="https://registro.br/dominio/">Domínio próprio .com.br</a></th>
+<td>R$ 50/ano (premissa simulada)</td>
+<td>Endereço opcional do projeto</td>
+<td>Não representa preço consultado nem disponibilidade de nome.</td>
+</tr>
+</tbody>
+</table></div>
+<div class="split budget">
+<div>
+<span class="tag">ORÇAMENTO SIMULADO</span><h3>Planejar antes de contratar.</h3>
+<p>Premissas didáticas: dólar a R$ 5,50, Railway a US$ 5/mês sem excedentes e domínio a R$ 50/ano.</p>
+</div>
+<div>
+<p class="stat">R$ 380<span>/ano</span></p>
+<p>12 × US$ 5 × R$ 5,50 + R$ 50 = R$ 380.</p>
+<p class="note">O câmbio e o domínio são simulados. Total sem impostos, tarifas ou consumo adicional. Não é proposta comercial.</p>
+</div>
+</div>
+</div></section><section class="section sage"><div class="wrap">
+<div class="section-head">
+<p class="eyebrow">PUBLICAÇÃO</p>
+<h2>Preparado para<br>o Railway.</h2>
+</div>
+<ol class="steps">
+<li>
+<strong>Conecte o repositório</strong><span>No Railway, crie um projeto a partir do GitHub e selecione a branch desejada. Use a raiz do repositório.</span>
+</li>
+<li>
+<strong>Deixe o Dockerfile trabalhar</strong><span>O Nginx serve apenas a pasta src. Não há instalação de pacotes nem build do front-end. O servidor escuta na variável PORT.</span>
+</li>
+<li>
+<strong>Gere um domínio</strong><span>Ative o domínio público do serviço e verifique as dez páginas. O healthcheck usa /index.html.</span>
+</li>
+</ol>
+<p>O GitHub Pages continua disponível como alternativa: o workflow manual publica a pasta src, sujeito à elegibilidade do repositório.</p>
+</div></section><section class="section "><div class="wrap">
+<div class="section-head">
+<p class="eyebrow">SUSTENTABILIDADE DIGITAL</p>
+<h2>Menos transferência.<br>Mais conteúdo.</h2>
+</div>
+<p class="lead">Fontes do sistema, imagens locais em WebP, mídia sem autoplay e nenhum framework reduzem dependências e transferências desnecessárias.</p>
+<p>Não atribuímos neutralidade de carbono a provedores sem evidência específica. Uma comparação ambiental entre hospedagens exigiria dados de energia, região e uso real.</p>
+</div></section><div class="wrap"><aside class="sources" aria-label="Fontes desta página"><h2>Para ir à fonte</h2>
+<ul>
+<li><a href="https://railway.com/pricing">Railway · Preços <span aria-hidden="true">↗</span></a></li>
+<li><a href="https://docs.railway.com/builds/dockerfiles">Railway · Dockerfiles <span aria-hidden="true">↗</span></a></li>
+<li><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages">GitHub · Disponibilidade do Pages <span aria-hidden="true">↗</span></a></li>
+<li><a href="https://registro.br/dominio/">Registro.br · Consulta de domínio <span aria-hidden="true">↗</span></a></li>
+</ul>
+<p>Fontes consultadas em 19 de outubro de 2026. Cada indicador mantém o ano de referência original.</p></aside></div></main>
+<footer class="footer"><div class="wrap">
+<div class="footer-heading">
+<a class="brand" href="index.html">AgroSustenta</a><p>O futuro começa<br>no que a gente cultiva.</p>
+</div>
+<nav class="footer-nav" aria-label="Menu do rodapé"><a href="index.html">Início</a><a href="sobre.html">Sobre</a><a href="projetos.html">Projetos</a><a href="impacto.html">Impacto</a><a href="acessibilidade.html">Acessibilidade</a><a href="galeria.html">Galeria</a><a href="midia.html">Mídia</a><a href="noticias.html">Notícias</a><a href="contato.html">Contato</a><a href="orcamento_hospedagem.html">Hospedagem</a></nav><div class="footer-bottom">
+<p>© 2026 · Equipe CJM · UNICID</p>
+<p>Projeto acadêmico. Informação aberta, impacto compartilhado.</p>
+<a href="acessibilidade.html">Compromisso com a inclusão ↗</a>
+</div>
+</div></footer>
+</body>
+</html>
