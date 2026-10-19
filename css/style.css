@@ -1,0 +1,169 @@
+/* Configurações gerais */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f2;
+    color: #263326;
+    line-height: 1.6;
+}
+
+
+/* Cabeçalho */
+
+header {
+    background-color: #245c35;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 15px;
+    font-size: 32px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 8px;
+    font-size: 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* Seção inicial */
+
+.inicio {
+    background-color: #dcebd8;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.conteudo-inicio {
+    max-width: 800px;
+    margin: auto;
+}
+
+.inicio h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #245c35;
+}
+
+.inicio p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
+/* Botão */
+
+.botao {
+    display: inline-block;
+    background-color: #245c35;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.botao:hover {
+    background-color: #174526;
+}
+
+
+/* Apresentação */
+
+.apresentacao {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.apresentacao h2 {
+    color: #245c35;
+    margin-bottom: 20px;
+}
+
+.apresentacao p {
+    margin-bottom: 15px;
+}
+
+
+/* Destaques */
+
+.destaques {
+    background-color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.destaques h2 {
+    color: #245c35;
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.card {
+    background-color: #f4f7f2;
+    padding: 25px;
+    border-radius: 8px;
+    width: 30%;
+}
+
+.card h3 {
+    color: #245c35;
+    margin-bottom: 10px;
+}
+
+
+/* Rodapé */
+
+footer {
+    background-color: #245c35;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .inicio h2 {
+        font-size: 32px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}

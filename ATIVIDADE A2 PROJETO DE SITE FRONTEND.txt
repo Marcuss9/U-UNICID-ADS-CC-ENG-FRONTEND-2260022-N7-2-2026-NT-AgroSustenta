@@ -1,0 +1,52 @@
+ATIVIDADE A2 – PROJETO DE SITE FRONT-END PARA WEB
+
+EQUIPE: CJM
+
+INTEGRANTES: - João Pedro Liberato de Oliveira - Marcus Vinicius dos
+Santos Cruz - Cauã Francisco Gomes da Silva
+
+PROFESSOR: Paulo Fratta
+
+DISCIPLINA: Ciência da Computação
+
+INSTITUIÇÃO: UNICID
+
+DATA DE ENTREGA: 21/09/2026
+
+DESCRIÇÃO DA ATIVIDADE
+
+A atividade consiste no desenvolvimento da primeira versão de um site
+completo em HTML5, composto por 10 páginas interligadas e navegáveis,
+abordando um tema relacionado à sustentabilidade e ao impacto social.
+
+O projeto da equipe, denominado “AgroSustenta – Fertilizantes
+Sustentáveis”, tem como tema “Fertilizantes Sustentáveis: Impactos
+Ambientais e Sociais e sua Relação com a Eficiência e a Rentabilidade na
+Produção Agrícola”.
+
+O site terá caráter informativo e educacional, utilizando dados,
+informações e iniciativas sustentáveis relacionadas ao uso de
+fertilizantes e à produção agrícola no Brasil. O conteúdo buscará
+apresentar a relação entre sustentabilidade, impactos ambientais e
+sociais, eficiência e rentabilidade na agricultura.
+
+A atividade contempla a criação de 10 páginas HTML: página inicial,
+apresentação do projeto, projetos de sustentabilidade e impacto social,
+dados e resultados, acessibilidade, galeria, recursos de mídia,
+notícias, contato e relatório comparativo de hospedagem e domínio.
+
+Também serão aplicados recursos de HTML5 semântico, CSS3, navegação
+entre páginas, formulário com validação HTML5, recursos multimídia como
+vídeo, áudio e iframe, além de medidas de acessibilidade, como textos
+alternativos para imagens, contraste adequado e suporte à navegação por
+teclado.
+
+O projeto será desenvolvido e organizado utilizando GitHub, com
+gerenciamento das tarefas por meio do GitHub Projects, e sua publicação
+demonstrativa será realizada pelo GitHub Pages.
+
+A atividade tem como objetivo colocar em prática os conhecimentos de
+desenvolvimento Front-End, organização de projetos, semântica HTML5,
+estilização com CSS, acessibilidade, sustentabilidade e impacto social,
+conforme os requisitos estabelecidos para a Entrega 01 – A2 – Front-End
+para Web.
