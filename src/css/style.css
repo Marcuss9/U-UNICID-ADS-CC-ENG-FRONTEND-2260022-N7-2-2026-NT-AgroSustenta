@@ -17,9 +17,10 @@ html {
 }
 body {
   margin:0;
+  overflow-wrap:anywhere;
   background:var(--paper);
   color:var(--ink);
-  font:18px/1.6 Arial,Helvetica,sans-serif
+  font:1.125rem/1.6 Arial,Helvetica,sans-serif
 }
 a {
   color:inherit;
@@ -46,13 +47,13 @@ h1,h2,h3 {
   letter-spacing:-.045em
 }
 h1 {
-  font-size:clamp(44px,6.8vw,96px)
+  font-size:clamp(2.75rem,6.8vw,6rem)
 }
 h2 {
-  font-size:clamp(36px,4.7vw,64px)
+  font-size:clamp(2.25rem,4.7vw,4rem)
 }
 h3 {
-  font-size:28px;
+  font-size:1.75rem;
   line-height:1.2;
   letter-spacing:-.025em
 }
@@ -96,7 +97,7 @@ mark {
   display:flex;
   align-items:center;
   gap:9px;
-  font-size:25px;
+  font-size:1.5625rem;
   font-weight:500;
   letter-spacing:-1px;
   text-decoration:none;
@@ -104,11 +105,11 @@ mark {
 }
 .brand-dot {
   align-self:flex-start;
-  font-size:12px;
+  font-size:0.75rem;
   margin:2px 0 0 -4px
 }
 .header-note {
-  font-size:10px;
+  font-size:0.625rem;
   letter-spacing:.12em;
   margin-left:auto;
   margin-right:28px
@@ -123,7 +124,7 @@ mark {
   flex-wrap:wrap
 }
 .nav a {
-  font-size:13px;
+  font-size:0.8125rem;
   text-decoration:none;
   padding:2px 0;
   color:#e7ebe6
@@ -146,7 +147,7 @@ mark {
   color:var(--paper);
   padding:14px 25px;
   text-decoration:none;
-  font-size:15px;
+  font-size:0.9375rem;
   cursor:pointer;
   line-height:1.4
 }
@@ -158,7 +159,7 @@ mark {
   background:transparent;
   border-color:#738383;
   padding:10px 18px;
-  font-size:13px
+  font-size:0.8125rem
 }
 .pill.light {
   background:var(--accent);
@@ -169,7 +170,7 @@ mark {
   background:#d1d0ff
 }
 .eyebrow {
-  font-size:11px;
+  font-size:0.6875rem;
   letter-spacing:.14em;
   line-height:1.5;
   margin:0 0 28px
@@ -188,12 +189,12 @@ mark {
   color:#c4d0c8
 }
 .edition {
-  font-size:10px;
+  font-size:0.625rem;
   letter-spacing:.12em;
   color:#c4d0c8
 }
 .hero h1 {
-  font-size:clamp(48px,7.6vw,106px);
+  font-size:clamp(3rem,7.6vw,6.625rem);
   max-width:1100px;
   margin:6px 0 38px;
   line-height:1.02
@@ -209,7 +210,7 @@ mark {
   padding-bottom:44px
 }
 .hero-bottom p {
-  font-size:17px;
+  font-size:1.0625rem;
   max-width:560px;
   color:#d2dcd6;
   margin:0
@@ -232,7 +233,7 @@ mark {
   position:absolute;
   inset:auto 40px 26px;
   color:white;
-  font-size:10px;
+  font-size:0.625rem;
   letter-spacing:.1em;
   display:flex;
   justify-content:space-between;
@@ -277,14 +278,14 @@ mark {
 .card-number {
   display:block;
   margin-bottom:56px;
-  font-size:13px
+  font-size:0.8125rem
 }
 .card p {
-  font-size:17px;
+  font-size:1.0625rem;
   color:var(--muted)
 }
 .card a {
-  font-size:15px
+  font-size:0.9375rem
 }
 .card .tag {
   margin-bottom:28px
@@ -296,7 +297,7 @@ mark {
   align-items:start
 }
 .lead {
-  font-size:23px;
+  font-size:1.4375rem;
   line-height:1.5;
   max-width:760px
 }
@@ -310,7 +311,7 @@ mark {
   border-top:1px solid var(--line)
 }
 .stat {
-  font-size:clamp(64px,7vw,94px);
+  font-size:clamp(4rem,7vw,5.875rem);
   letter-spacing:-.07em;
   line-height:1.1;
   margin:12px 0 24px
@@ -320,13 +321,13 @@ mark {
   letter-spacing:-.02em
 }
 .stats h3 {
-  font-size:20px;
+  font-size:1.25rem;
   letter-spacing:-.015em;
   max-width:290px;
   line-height:1.35
 }
 .stats article>p:last-child {
-  font-size:12px;
+  font-size:0.75rem;
   color:var(--muted)
 }
 .stats .stat-message {
@@ -340,11 +341,11 @@ mark {
   gap:24px
 }
 .stat-message h3 {
-  font-size:28px;
+  font-size:1.75rem;
   margin:0
 }
 .stat-message a {
-  font-size:14px
+  font-size:0.875rem
 }
 .tag {
   display:inline-block;
@@ -353,7 +354,7 @@ mark {
   background:var(--accent);
   color:var(--ink);
   padding:5px 12px;
-  font-size:10px;
+  font-size:0.625rem;
   letter-spacing:.075em;
   line-height:1.5
 }
@@ -371,7 +372,7 @@ mark {
 }
 .page-intro .lead {
   color:var(--muted);
-  font-size:20px;
+  font-size:1.25rem;
   max-width:690px;
   margin-bottom:0
 }
@@ -384,7 +385,7 @@ mark {
 }
 summary {
   cursor:pointer;
-  font-size:20px;
+  font-size:1.25rem;
   line-height:1.45
 }
 details p {
@@ -407,7 +408,7 @@ details[open] summary {
   margin-top:28px
 }
 .project-list p {
-  font-size:17px
+  font-size:1.0625rem
 }
 .muted {
   color:var(--muted)
@@ -428,19 +429,19 @@ details[open] summary {
 }
 .steps li:before {
   content:counter(steps,decimal-leading-zero);
-  font-size:13px;
+  font-size:0.8125rem;
   grid-row:1/3
 }
 .steps strong {
   font-weight:500;
-  font-size:23px
+  font-size:1.4375rem
 }
 .steps span {
-  font-size:17px;
+  font-size:1.0625rem;
   display:block
 }
 .note {
-  font-size:14px;
+  font-size:0.875rem;
   line-height:1.6;
   color:var(--muted);
   margin-top:24px
@@ -453,13 +454,13 @@ table {
   border-collapse:collapse;
   width:100%;
   min-width:620px;
-  font-size:16px;
+  font-size:1rem;
   line-height:1.5;
   text-align:left
 }
 caption {
   text-align:left;
-  font-size:14px;
+  font-size:0.875rem;
   color:var(--muted);
   padding:0 0 20px
 }
@@ -472,7 +473,7 @@ th {
   font-weight:500
 }
 thead th {
-  font-size:12px;
+  font-size:0.75rem;
   letter-spacing:.04em;
   background:var(--ink);
   color:var(--paper)
@@ -481,7 +482,7 @@ tbody th {
   width:35%
 }
 td a {
-  font-size:14px
+  font-size:0.875rem
 }
 .total {
   background:var(--accent)
@@ -491,15 +492,15 @@ td a {
   padding:48px 0
 }
 .sources h2 {
-  font-size:24px;
+  font-size:1.5rem;
   letter-spacing:-.02em
 }
 .sources ul {
   padding-left:20px;
-  font-size:15px
+  font-size:0.9375rem
 }
 .sources>p {
-  font-size:12px;
+  font-size:0.75rem;
   color:var(--muted)
 }
 .plain-list {
@@ -534,11 +535,11 @@ td a {
   padding-top:24px
 }
 .gallery h2 {
-  font-size:26px;
+  font-size:1.625rem;
   letter-spacing:-.02em
 }
 .gallery p {
-  font-size:15px;
+  font-size:0.9375rem;
   max-width:650px
 }
 .media-layout {
@@ -571,7 +572,7 @@ iframe {
   align-items:center
 }
 .feature-news h3 {
-  font-size:42px
+  font-size:2.625rem
 }
 .feature-news img {
   width:100%;
@@ -585,16 +586,16 @@ iframe {
   margin:0
 }
 .contact legend {
-  font-size:24px;
+  font-size:1.5rem;
   margin-bottom:24px
 }
 .contact label:not(.check) {
   display:block;
-  font-size:15px;
+  font-size:0.9375rem;
   margin-bottom:8px
 }
 .contact label span {
-  font-size:12px;
+  font-size:0.75rem;
   color:var(--muted)
 }
 input:not([type=checkbox]),select,textarea {
@@ -617,7 +618,7 @@ input::placeholder,textarea::placeholder {
   display:flex;
   gap:12px;
   align-items:start;
-  font-size:14px;
+  font-size:0.875rem;
   margin-bottom:24px
 }
 .check input {
@@ -655,7 +656,7 @@ input::placeholder,textarea::placeholder {
   margin-bottom:64px
 }
 .footer-heading>p {
-  font-size:34px;
+  font-size:2.125rem;
   letter-spacing:-.035em;
   line-height:1.15;
   margin:0
@@ -667,7 +668,7 @@ input::placeholder,textarea::placeholder {
   margin-bottom:48px
 }
 .footer-nav a {
-  font-size:14px;
+  font-size:0.875rem;
   text-decoration:none
 }
 .footer-bottom {
@@ -677,14 +678,14 @@ input::placeholder,textarea::placeholder {
   justify-content:space-between;
   gap:24px;
   color:#c4d0c8;
-  font-size:11px
+  font-size:0.6875rem
 }
 .footer-bottom p {
   margin:0
 }
 @media(min-width:1600px) {
   .hero h1 {
-    font-size:112px
+    font-size:7rem
   }
 }
 @media(max-width:1000px) {
@@ -759,10 +760,10 @@ input::placeholder,textarea::placeholder {
     gap:16px
   }
   .brand {
-    font-size:23px
+    font-size:1.4375rem
   }
   .topbar>.pill {
-    font-size:11px;
+    font-size:0.6875rem;
     padding:8px 12px;
     gap:12px
   }
@@ -771,7 +772,7 @@ input::placeholder,textarea::placeholder {
     padding-block:17px
   }
   .nav a {
-    font-size:13px
+    font-size:0.8125rem
   }
   .hero {
     padding-top:32px
@@ -780,11 +781,11 @@ input::placeholder,textarea::placeholder {
     display:none
   }
   .hero-top .eyebrow {
-    font-size:9px;
+    font-size:0.5625rem;
     letter-spacing:.08em
   }
   .hero h1 {
-    font-size:clamp(42px,10.2vw,61px);
+    font-size:clamp(2.625rem,10.2vw,3.8125rem);
     letter-spacing:-.055em;
     margin-bottom:28px
   }
@@ -793,7 +794,7 @@ input::placeholder,textarea::placeholder {
     padding-bottom:36px
   }
   .hero-bottom p {
-    font-size:16px;
+    font-size:1rem;
     margin-bottom:26px
   }
   .hero-image {
@@ -802,7 +803,7 @@ input::placeholder,textarea::placeholder {
   }
   .hero-image figcaption {
     inset:auto 24px 20px;
-    font-size:8px
+    font-size:0.5rem
   }
   .hero-image figcaption span {
     display:none
@@ -814,13 +815,13 @@ input::placeholder,textarea::placeholder {
     margin-bottom:32px
   }
   .section-head h2 {
-    font-size:36px
+    font-size:2.25rem
   }
   .split,.two,.stats,.feature-news,.gallery {
     grid-template-columns:1fr
   }
   .lead {
-    font-size:21px
+    font-size:1.3125rem
   }
   .stats .stat-message {
     grid-column:auto;
@@ -835,17 +836,17 @@ input::placeholder,textarea::placeholder {
     padding:20px 0
   }
   .stat {
-    font-size:80px
+    font-size:5rem
   }
   .page-intro {
     padding-top:48px;
     padding-bottom:48px
   }
   .page-intro h1 {
-    font-size:46px
+    font-size:2.875rem
   }
   .page-intro .lead {
-    font-size:18px
+    font-size:1.125rem
   }
   .gallery figure:first-child {
     grid-column:auto
@@ -858,7 +859,7 @@ input::placeholder,textarea::placeholder {
     gap:40px
   }
   .feature-news h3 {
-    font-size:34px
+    font-size:2.125rem
   }
   .feature-news img {
     height:300px
@@ -877,7 +878,7 @@ input::placeholder,textarea::placeholder {
     margin-bottom:36px
   }
   .footer-heading>p {
-    font-size:30px;
+    font-size:1.875rem;
     margin-top:32px
   }
   .footer-nav {
@@ -891,7 +892,7 @@ input::placeholder,textarea::placeholder {
     margin:0 0 14px!important
   }
   .budget .stat {
-    font-size:64px
+    font-size:4rem
   }
   th,td {
     padding:16px 14px
@@ -947,3 +948,39 @@ input::placeholder,textarea::placeholder {
     display:block
   }
 }
+
+/* Preferências de leitura e estados do formulário. */
+html.texto-ampliado { font-size:125%; }
+[hidden] { display:none!important; }
+.a11y-bar { background:var(--sage); color:var(--ink); border-bottom:1px solid var(--line); }
+.a11y-inner { display:flex; align-items:center; flex-wrap:wrap; gap:8px 20px; padding-block:12px; font-size:.875rem; }
+.a11y-controls { display:flex; flex-wrap:wrap; gap:8px; }
+.a11y-controls button { padding:8px 12px; border:1px solid var(--ink); border-radius:4px; background:var(--paper); color:var(--ink); cursor:pointer; }
+.a11y-controls button[aria-pressed="true"] { background:var(--ink); color:var(--paper); }
+.a11y-controls button:disabled { cursor:default; }
+.a11y-status { flex-basis:100%; margin:0; }
+.a11y-status:empty { display:none; }
+.footer-purpose { font-size:.875rem; margin-bottom:28px; }
+.pill,.a11y-controls button,a { transition:background-color .15s,color .15s; }
+.pill.secondary { background:transparent; color:var(--ink); margin-top:12px; }
+.field-error { color:#9c2222; font-size:.875rem; margin:-16px 0 24px; }
+.field-error:empty { display:none; }
+.contact .campo-invalido { border:2px solid #9c2222; }
+.check:has(.campo-invalido) { outline:2px solid #9c2222; outline-offset:4px; }
+
+/* Cores explícitas evitam texto claro sobre cartões claros no alto contraste. */
+html.alto-contraste { --ink:#fff; --paper:#000; --sage:#111; --accent:#ffeb3b; --line:#fff; --muted:#fff; }
+.alto-contraste body,.alto-contraste .header,.alto-contraste .hero,.alto-contraste .footer { background:#000; color:#fff; }
+.alto-contraste .card,.alto-contraste .stats .stat-message,.alto-contraste .tag,.alto-contraste mark,.alto-contraste .total,.alto-contraste thead th,.alto-contraste .form-status { background:#111; color:#fff; border:1px solid #fff; }
+.alto-contraste a,.alto-contraste .nav a,.alto-contraste .nav a[aria-current] { color:#ffeb3b; }
+.alto-contraste .pill,.alto-contraste .a11y-controls button { background:#000; color:#ffeb3b; border:1px solid #ffeb3b; }
+.alto-contraste .a11y-controls button[aria-pressed="true"] { background:#ffeb3b; color:#000; }
+.alto-contraste input,.alto-contraste select,.alto-contraste textarea { background:#000; color:#fff; border-color:#fff; }
+.alto-contraste input::placeholder,.alto-contraste textarea::placeholder { color:#ddd; }
+.alto-contraste .field-error { color:#ffb3b3; }
+.alto-contraste .contact .campo-invalido,.alto-contraste .check:has(.campo-invalido) { border-color:#ffb3b3; outline-color:#ffb3b3; }
+.alto-contraste :focus-visible { outline-color:#ffeb3b; }
+.alto-contraste iframe { border:2px solid #fff; }
+.alto-contraste * { transition:none!important; }
+.alto-contraste .pill:hover { background:#000; color:#ffeb3b; }
+@media print { .a11y-bar { display:none; } }

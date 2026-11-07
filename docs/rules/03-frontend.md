@@ -6,7 +6,7 @@
 - Mantenha a identidade visual documentada (verde profundo, lavanda, tipografia do sistema e componentes editoriais) e o CSS atual; novas convenções devem ser coerentes com `src/css/style.css`.
 - Construa layouts responsivos sem introduzir rolagem horizontal indevida; verifique imagens, tabelas, menus e formulários.
 - Use JavaScript apenas quando indispensável; mantenha navegação e conteúdo acessíveis sem JS. Não implemente bibliotecas/frameworks ou comportamento oculto de rede.
-- O formulário de contato é **demonstração**: preserve validação HTML5, mensagem de sucesso apenas demonstrativa, ausência de transmissão/armazenamento e ausência de `name` nos campos para evitar inclusão de dados na URL.
+- O formulário de contato é **demonstração**: preserve os atributos de validação HTML5, complemente com validação JS, mensagens e destaque de erros; salve somente um rascunho local, com opção de apagar. Não transmita dados. Preserve a ausência de `name` nos campos para evitar inclusão de valores na URL. Esse armazenamento foi autorizado na revisão de 06/11/2026 para atender à segunda entrega.
 - Prefira mudanças pequenas com impacto verificável. Não substitua páginas inteiras quando uma alteração pontual resolver.
 
 **Verificação:** teste navegação entre páginas, estados de formulário, mídia e comportamento com JS desabilitado quando pertinente.

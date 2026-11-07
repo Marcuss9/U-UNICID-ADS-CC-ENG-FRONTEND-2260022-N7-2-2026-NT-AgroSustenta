@@ -8,13 +8,35 @@
 <meta name="theme-color" content="#001d21">
 <link rel="icon" href="assets/simbolo.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/style.css">
+<script src="js/acessibilidade.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<div class="a11y-bar">
+  <div class="wrap a11y-inner">
+    <a href="acessibilidade.html">Recursos de acessibilidade</a>
+    <div id="controles-acessibilidade" class="a11y-controls" role="group" aria-label="Preferências de leitura" hidden>
+      <button id="alto-contraste" type="button" aria-pressed="false">Alto contraste</button>
+      <button id="texto-ampliado" type="button" aria-pressed="false">Texto ampliado</button>
+      <button id="ativar-libras" type="button" aria-describedby="aviso-acessibilidade">Ativar Libras</button>
+    </div>
+    <p id="aviso-acessibilidade" class="a11y-status" role="status"></p>
+  </div>
+</div>
 <header class="header"><div class="wrap topbar">
 <a class="brand" href="index.html" aria-label="AgroSustenta, início"><img src="assets/simbolo.svg" alt="" width="30" height="30">AgroSustenta</a><span class="header-note">CONHECIMENTO QUE CULTIVA O FUTURO</span><a class="pill small" href="projetos.html">Explore o projeto <span aria-hidden="true">↗</span></a>
 </div>
-<nav class="wrap nav" aria-label="Menu principal"><a href="index.html">Início</a><a href="sobre.html">Sobre</a><a href="projetos.html" aria-current="page">Projetos</a><a href="impacto.html">Impacto</a><a href="acessibilidade.html">Acessibilidade</a><a href="galeria.html">Galeria</a><a href="midia.html">Mídia</a><a href="noticias.html">Notícias</a><a href="contato.html">Contato</a><a href="orcamento_hospedagem.html">Hospedagem</a></nav></header>
+<nav class="wrap nav" aria-label="Menu principal"><a href="index.html">Início</a>
+<a href="sobre.html">Sobre</a>
+<a href="projetos.html" aria-current="page">Projetos</a>
+<a href="impacto.html">Impacto</a>
+<a href="acessibilidade.html">Acessibilidade</a>
+<a href="galeria.html">Galeria</a>
+<a href="midia.html">Mídia</a>
+<a href="noticias.html">Notícias</a>
+<a href="contato.html">Contato</a>
+<a href="orcamento_hospedagem.html">Hospedagem</a></nav></header>
 <main id="conteudo" tabindex="-1"><section class="page-intro wrap"><p class="eyebrow">AGROSUSTENTA / 02 / INICIATIVAS</p>
 <h1>Ideias que encontram<br><mark>terra fértil.</mark>
 </h1>
@@ -60,12 +82,38 @@
 <p class="note">Não é um projeto executado nem um resultado de pesquisa. Todos os números desta oficina são simulados.</p>
 </div>
 </div>
-</div></section></main>
+</div></section>
+<section id="apoie" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">COMO APOIAR</p>
+      <h2>O conhecimento cresce<br>quando circula.</h2>
+    </div>
+    <p class="lead">Apoiar esta proposta é aproximar mais pessoas da educação ambiental e de informações acessíveis.</p>
+    <div class="grid three">
+      <article class="card"><h3>Compartilhe uma leitura</h3><p>Divulgue o site e os links das fontes com colegas e pessoas interessadas em agricultura.</p><a href="noticias.html">Escolha uma leitura</a></article>
+      <article class="card"><h3>Contribua com ideias</h3><p>Experimente sugerir um tema, uma fonte ou uma melhoria de acessibilidade no formulário demonstrativo.</p><a href="contato.html">Testar uma sugestão</a></article>
+      <article class="card"><h3>Conheça o voluntariado</h3><p>No cenário fictício Horta Escola Raízes, voluntários poderiam ajudar na organização das oficinas e na divulgação dos materiais.</p><a href="contato.html">Simular interesse em participar</a></article>
+    </div>
+    <p class="note">Projeto acadêmico: não recebemos doações, inscrições nem mensagens reais. As possibilidades de voluntariado são uma simulação educativa.</p>
+  </div>
+</section>
+</main>
 <footer class="footer"><div class="wrap">
 <div class="footer-heading">
 <a class="brand" href="index.html">AgroSustenta</a><p>O futuro começa<br>no que a gente cultiva.</p>
 </div>
-<nav class="footer-nav" aria-label="Menu do rodapé"><a href="index.html">Início</a><a href="sobre.html">Sobre</a><a href="projetos.html">Projetos</a><a href="impacto.html">Impacto</a><a href="acessibilidade.html">Acessibilidade</a><a href="galeria.html">Galeria</a><a href="midia.html">Mídia</a><a href="noticias.html">Notícias</a><a href="contato.html">Contato</a><a href="orcamento_hospedagem.html">Hospedagem</a></nav><div class="footer-bottom">
+<nav class="footer-nav" aria-label="Menu do rodapé"><a href="index.html">Início</a>
+<a href="sobre.html">Sobre</a>
+<a href="projetos.html">Projetos</a>
+<a href="impacto.html">Impacto</a>
+<a href="acessibilidade.html">Acessibilidade</a>
+<a href="galeria.html">Galeria</a>
+<a href="midia.html">Mídia</a>
+<a href="noticias.html">Notícias</a>
+<a href="contato.html">Contato</a>
+<a href="orcamento_hospedagem.html">Hospedagem</a></nav><p class="footer-purpose">Educação para a sustentabilidade: <a href="sobre.html#ods">ODS 2, 12 e 15</a>. <a href="projetos.html#apoie">Saiba como apoiar</a>.</p>
+<div class="footer-bottom">
 <p>© 2026 · Equipe CJM · UNICID</p>
 <p>Projeto acadêmico. Informação aberta, impacto compartilhado.</p>
 <a href="acessibilidade.html">Compromisso com a inclusão ↗</a>

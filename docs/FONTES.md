@@ -38,3 +38,15 @@ Fotografias disponibilizadas sob a [licença Unsplash](https://unsplash.com/lice
 ## Referência visual
 
 [AngelList](https://www.angellist.com/) e [AngelList no Refero Styles](https://styles.refero.design/style/6db40006-05ac-4770-b63e-dfd9ebfd534c), consultados em 19/10/2026. Adaptação de tipografia ampla, composição editorial, verde profundo/lavanda, superfícies planas e controles arredondados. Não usa fontes proprietárias nem logotipos do AngelList.
+
+
+## Complementos da revisão de 06/11/2026
+
+- ODS 2: https://brasil.un.org/pt-br/sdgs/2 — metas 2.3 e 2.4. ODS 12: https://brasil.un.org/pt-br/sdgs/12 — metas 12.2 e 12.8. ODS 15: https://brasil.un.org/pt-br/sdgs/15 — meta 15.3. Fontes oficiais consultadas em 06/11/2026. A relação educativa com o site é interpretação da equipe, sem alegação de metas atingidas.
+- VLibras: integração conforme https://vlibras.gov.br/doc/widget/installation/webpageintegration.html e descrição oficial https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/vlibras, consultadas em 06/11/2026. Carregamento sob demanda; depende de serviço externo.
+- Áudio local leitura-manejo.mp3: texto educativo da equipe já presente na transcrição do vídeo; voz sintética em português gerada com eSpeak NG, https://github.com/espeak-ng/espeak-ng. Não imita voz de integrante. A transcrição publicada corresponde ao texto narrado. O podcast original do MAPA continua como link complementar.
+- Área de apoio: proposta didática vinculada à Horta Escola Raízes, cenário fictício já identificado no projeto. Não representa voluntariado, captação ou resultados reais.
+
+A comparação de hospedagem preserva os preços históricos e as premissas simuladas já identificados na página. Não houve contratação, verificação atual de preço de planos nem alegação de disponibilidade de domínio nesta revisão.
+
+- Compatibilidade de vídeo: manejo.webm foi convertido diretamente do MP4 original com FFmpeg, preservando conteúdo e duração. O MP4 original permanece como alternativa.

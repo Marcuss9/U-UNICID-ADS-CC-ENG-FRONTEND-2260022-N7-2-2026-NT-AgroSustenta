@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-06",
+  "mainPages": 10,
+  "htmlWithIframe": 11,
+  "localReferences": 348,
+  "errors": [],
+  "originalsPreserved": [
+    "docs/Escopo_Projeto_Fertilizantes_Sustentaveis_CJM.pdf",
+    "docs/ATIVIDADE A2 PROJETO DE SITE FRONTEND.txt",
+    "docs/evidencias/Captura de tela CJM.png",
+    "src/assets/manejo.mp4"
+  ],
+  "productionDependencies": 0
+}

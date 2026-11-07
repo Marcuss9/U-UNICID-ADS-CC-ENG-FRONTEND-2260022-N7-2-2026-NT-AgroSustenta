@@ -1,7 +1,8 @@
-# 08 — Railway, Docker e GitHub Pages
+# 08 — Hospedagem estática e publicação opcional
 
 **Obrigatório**
-- Preserve publicação estática via Nginx do `Dockerfile`, com `src/` copiada para a raiz web, configuração em `deploy/default.conf.template` e `railway.toml` apontando para o Dockerfile.
+- Railway não é exigência. O responsável autorizou outros serviços em 06/11/2026. Prefira publicar somente src em um serviço estático com HTTPS; a escolha e a URL devem ser documentadas. As configurações existentes de Railway/Pages são alternativas preservadas.
+- Se Railway for escolhido, preserve publicação estática via Nginx do `Dockerfile`, com `src/` copiada para a raiz web, configuração em `deploy/default.conf.template` e `railway.toml` apontando para o Dockerfile.
 - Para Railway, mantenha a raiz do **repositório** como diretório de build, variável `PORT` e healthcheck em `/index.html`. Não acrescente banco, servidor de aplicação ou comandos de build de frontend.
 - Preserve a publicação manual `workflow_dispatch` do GitHub Pages em `.github/workflows/pages.yml`, publicando somente `src/`; não torne publicação automática sem aprovação.
 - Não configure, execute, publique, exponha secrets ou contrate serviços sem autorização específica. Criar código de infraestrutura não autoriza fazer deploy.

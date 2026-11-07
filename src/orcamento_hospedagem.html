@@ -8,13 +8,35 @@
 <meta name="theme-color" content="#001d21">
 <link rel="icon" href="assets/simbolo.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/style.css">
+<script src="js/acessibilidade.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<div class="a11y-bar">
+  <div class="wrap a11y-inner">
+    <a href="acessibilidade.html">Recursos de acessibilidade</a>
+    <div id="controles-acessibilidade" class="a11y-controls" role="group" aria-label="Preferências de leitura" hidden>
+      <button id="alto-contraste" type="button" aria-pressed="false">Alto contraste</button>
+      <button id="texto-ampliado" type="button" aria-pressed="false">Texto ampliado</button>
+      <button id="ativar-libras" type="button" aria-describedby="aviso-acessibilidade">Ativar Libras</button>
+    </div>
+    <p id="aviso-acessibilidade" class="a11y-status" role="status"></p>
+  </div>
+</div>
 <header class="header"><div class="wrap topbar">
 <a class="brand" href="index.html" aria-label="AgroSustenta, início"><img src="assets/simbolo.svg" alt="" width="30" height="30">AgroSustenta</a><span class="header-note">CONHECIMENTO QUE CULTIVA O FUTURO</span><a class="pill small" href="projetos.html">Explore o projeto <span aria-hidden="true">↗</span></a>
 </div>
-<nav class="wrap nav" aria-label="Menu principal"><a href="index.html">Início</a><a href="sobre.html">Sobre</a><a href="projetos.html">Projetos</a><a href="impacto.html">Impacto</a><a href="acessibilidade.html">Acessibilidade</a><a href="galeria.html">Galeria</a><a href="midia.html">Mídia</a><a href="noticias.html">Notícias</a><a href="contato.html">Contato</a><a href="orcamento_hospedagem.html" aria-current="page">Hospedagem</a></nav></header>
+<nav class="wrap nav" aria-label="Menu principal"><a href="index.html">Início</a>
+<a href="sobre.html">Sobre</a>
+<a href="projetos.html">Projetos</a>
+<a href="impacto.html">Impacto</a>
+<a href="acessibilidade.html">Acessibilidade</a>
+<a href="galeria.html">Galeria</a>
+<a href="midia.html">Mídia</a>
+<a href="noticias.html">Notícias</a>
+<a href="contato.html">Contato</a>
+<a href="orcamento_hospedagem.html" aria-current="page">Hospedagem</a></nav></header>
 <main id="conteudo" tabindex="-1"><section class="page-intro wrap"><p class="eyebrow">AGROSUSTENTA / 09 / COLOCAR NO AR</p>
 <h1>Uma base leve.<br><mark>Um alcance maior.</mark>
 </h1>
@@ -72,20 +94,16 @@
 </div></section><section class="section sage"><div class="wrap">
 <div class="section-head">
 <p class="eyebrow">PUBLICAÇÃO</p>
-<h2>Preparado para<br>o Railway.</h2>
+<h2>Publicar com<br>uma base simples.</h2>
 </div>
+<p>O site pode ser hospedado em qualquer serviço que publique arquivos estáticos com HTTPS. Railway é uma opção, não uma exigência.</p>
 <ol class="steps">
-<li>
-<strong>Conecte o repositório</strong><span>No Railway, crie um projeto a partir do GitHub e selecione a branch desejada. Use a raiz do repositório.</span>
-</li>
-<li>
-<strong>Deixe o Dockerfile trabalhar</strong><span>O Nginx serve apenas a pasta src. Não há instalação de pacotes nem build do front-end. O servidor escuta na variável PORT.</span>
-</li>
-<li>
-<strong>Gere um domínio</strong><span>Ative o domínio público do serviço e verifique as dez páginas. O healthcheck usa /index.html.</span>
-</li>
+  <li><strong>Escolha um serviço estático</strong><span>A pasta a publicar é src, que já contém index.html. Não há instalação, comando de build ou servidor de aplicação.</span></li>
+  <li><strong>Confira acesso e custo</strong><span>GitHub Pages tem um fluxo manual preparado neste repositório, sujeito ao plano e ao acesso do repositório privado. Outro serviço estático pode receber a mesma pasta src.</span></li>
+  <li><strong>Teste a URL com HTTPS</strong><span>Abra as dez páginas e confira formulário, rascunho, teclado, imagens e mídias. Registre a URL final no README e no orçamento.</span></li>
 </ol>
-<p>O GitHub Pages continua disponível como alternativa: o workflow manual publica a pasta src, sujeito à elegibilidade do repositório.</p>
+<p>Para este projeto, a preferência técnica é hospedagem estática: atende às dez páginas e dispensa contêiner. A contratação e a publicação ainda precisam ser confirmadas. O exemplo de R$ 380/ano acima é somente uma simulação de custo da alternativa Railway com domínio próprio.</p>
+<p>Se a equipe escolher Railway, a configuração opcional com Nginx continua disponível na raiz do repositório. Domínio próprio também é opcional.</p>
 </div></section><section class="section "><div class="wrap">
 <div class="section-head">
 <p class="eyebrow">SUSTENTABILIDADE DIGITAL</p>
@@ -105,7 +123,17 @@
 <div class="footer-heading">
 <a class="brand" href="index.html">AgroSustenta</a><p>O futuro começa<br>no que a gente cultiva.</p>
 </div>
-<nav class="footer-nav" aria-label="Menu do rodapé"><a href="index.html">Início</a><a href="sobre.html">Sobre</a><a href="projetos.html">Projetos</a><a href="impacto.html">Impacto</a><a href="acessibilidade.html">Acessibilidade</a><a href="galeria.html">Galeria</a><a href="midia.html">Mídia</a><a href="noticias.html">Notícias</a><a href="contato.html">Contato</a><a href="orcamento_hospedagem.html">Hospedagem</a></nav><div class="footer-bottom">
+<nav class="footer-nav" aria-label="Menu do rodapé"><a href="index.html">Início</a>
+<a href="sobre.html">Sobre</a>
+<a href="projetos.html">Projetos</a>
+<a href="impacto.html">Impacto</a>
+<a href="acessibilidade.html">Acessibilidade</a>
+<a href="galeria.html">Galeria</a>
+<a href="midia.html">Mídia</a>
+<a href="noticias.html">Notícias</a>
+<a href="contato.html">Contato</a>
+<a href="orcamento_hospedagem.html">Hospedagem</a></nav><p class="footer-purpose">Educação para a sustentabilidade: <a href="sobre.html#ods">ODS 2, 12 e 15</a>. <a href="projetos.html#apoie">Saiba como apoiar</a>.</p>
+<div class="footer-bottom">
 <p>© 2026 · Equipe CJM · UNICID</p>
 <p>Projeto acadêmico. Informação aberta, impacto compartilhado.</p>
 <a href="acessibilidade.html">Compromisso com a inclusão ↗</a>

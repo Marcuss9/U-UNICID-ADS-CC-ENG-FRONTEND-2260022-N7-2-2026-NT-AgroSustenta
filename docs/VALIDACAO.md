@@ -1,38 +1,59 @@
-# Validação desta implementação
+# Validação da revisão de 06/11/2026
 
-Data: 19/10/2026. Separação entre verificações executadas e revisão ainda necessária.
+Base: branch main no commit 55ef626b. Resultados desta revisão local, em Chromium 1193, sem frameworks ou dependências acrescentadas ao site. O registro anterior permanece em VALIDACAO_2026-10-19.md.
 
-## Executado
+## Resultados executados
 
-- **10 páginas principais**, todas com menu para as dez páginas, indicação de página atual e rodapé compartilhado.
-- **435 verificações estruturais**, sem erros, por leitura e análise local dos documentos: doctype, idioma, viewport, descrição, um H1 por documento, região principal, IDs únicos, destinos locais, âncoras, texto alternativo, títulos de iframe e associação de rótulos.
-- Presença dos campos obrigatórios, `type="email"`, ausência de nomes de campos que pudessem enviar valores pela URL e estrutura do formulário HTML5.
-- Presença de vídeo, legendas WebVTT, áudio e iframe; existência dos arquivos locais e decodificação das imagens WebP.
-- `node --check src/js/contato.js`: passou. O Node foi usado somente como ferramenta de verificação, não é dependência do projeto.
-- Leitura válida do `railway.toml`, conferência do healthcheck `/index.html` e da variável `${PORT}` no template do Nginx.
-- Balanceamento de delimitadores do CSS. Não equivale à validação completa do CSS.
-- `ffprobe`: vídeo H.264 de aproximadamente 30 segundos, 960 × 540, sem áudio, otimizado com faststart. Aproximadamente 90 KB.
-- Inspeção das três fotografias baixadas e do pôster do vídeo.
-- Sem `package.json`, frameworks, banco, scripts de build ou dependências do front-end. Um único script JS de 347 bytes.
+| Verificação | Resultado | Evidência |
+| --- | --- | --- |
+| HTML das dez páginas e do iframe | Nu Html Checker 26.11.4: zero erros e zero mensagens | evidencias/2026-11-06/html-atual.json |
+| HTML anterior | Três erros de fechamento source/track em midia.html | evidencias/2026-11-06/html-anterior.json |
+| CSS compartilhado | Nu Html Checker: zero erros | evidencias/2026-11-06/css-atual.json |
+| Estrutura e links locais | Dez páginas principais, 11 HTML com iframe, 348 referências locais, zero destinos/âncoras ausentes e zero IDs repetidos | evidencias/2026-11-06/estrutura.json |
+| JavaScript | Verificação de sintaxe dos dois scripts passou; zero exceções JS nos cenários de navegador | evidencias/2026-11-06/navegador.json |
+| Responsividade padrão | Dez páginas em 360, 768 e 1440 px sem overflow horizontal da página | navegador.json |
+| Texto ampliado e contraste | Dez páginas em 320 e 1440 px sem overflow; fonte ampliada em 25%; preferências mantidas entre páginas | navegador.json; contato-alto-contraste.png |
+| Formulário | Vazio, espaços, e-mail inválido, mensagem curta, correção e confirmação válida; foco no primeiro erro e no resultado | navegador.json; contato-erros-depois.png |
+| Persistência | Rascunho recuperado após recarregar; confirmação não persistida; apagar limpa campos e localStorage | navegador.json |
+| Falha de armazenamento | JSON corrompido e armazenamento bloqueado não interrompem os controles; avisos apresentados | navegador.json |
+| Sem JavaScript | Conteúdo e formulário nativo disponíveis; controles dependentes de JS ocultos; dados não incluídos na URL | navegador.json |
+| Teclado | Link de salto, alternância das preferências e sequência dos campos até o envio, com foco visível | navegador.json |
+| Mídia local | WebM de 30,042 s e MP3 de 28,138 s carregados e reproduzidos; tempo de reprodução avançou; arquivo de legendas disponível e iframe carregado | navegador.json, campo media |
+| VLibras | Script oficial carregado e botão flutuante renderizado; falha de rede simulada permite tentar novamente | navegador.json; libras-carregamento.png |
+| Acessibilidade automática | axe-core 4.10.3, regras WCAG A/AA selecionadas: 20 auditorias, zero violações detectadas | evidencias/2026-11-06/axe.json |
+| Preservação | Escopo PDF, atividade original, captura antiga e MP4 original preservados byte a byte | estrutura.json |
 
-## Limites desta sessão
+## Correções encontradas durante a verificação
 
-- Não foi executada revisão visual das páginas em navegador. Não declaramos ausência comprovada de overflow ou certificação de responsividade.
-- Docker não estava instalado. A imagem não foi construída nem executada nesta sessão; o deploy Railway também não foi realizado.
-- Não foi executado o validador externo W3C nem teste com leitor de tela. A análise local não substitui essas etapas.
-- O podcast é externo e depende da disponibilidade do MAPA. O resumo apresentado não substitui transcrição integral para pessoas que precisam de alternativa textual completa ao episódio.
-- A publicação demonstrativa no GitHub Pages depende do plano e das configurações do repositório privado.
+- Texto ampliado em 320 px podia causar overflow: adicionada quebra de palavras longas.
+- A transição ao ativar alto contraste podia passar por cores intermediárias de baixo contraste: transições desativadas nesse modo e hover dos botões corrigido.
+- O Chromium usado no teste não disponibiliza o codec H.264 do MP4 original: acrescentada uma conversão WebM do mesmo vídeo, preservando MP4, legendas e transcrição. A reprodução WebM foi confirmada.
+- O áudio principal agora é uma leitura local do texto educativo, com transcrição correspondente, em vez de depender da transcrição indisponível do podcast externo. O podcast permanece como link de aprofundamento.
 
-## Roteiro antes de publicar
+## Prints e comparação visual
 
-1. Abrir todas as páginas em larguras de 360, 768 e 1440 px; testar zoom de 200% e 400%, inclusive tabelas e menus.
-2. Navegar apenas por teclado: link para pular conteúdo, menu, detalhes, mídia e formulário. Conferir foco e ordem.
-3. No formulário: testar campos vazios, e-mail inválido, mensagem curta e submissão válida. Confirmar aviso e ausência de envio. Repetir sem JavaScript.
-4. Testar leitor de tela: landmarks, títulos, cabeçalhos de tabela e rótulos dos campos.
-5. Reproduzir o vídeo, ativar/desativar legendas e comparar com a transcrição; abrir o áudio e confirmar a disponibilidade externa.
-6. Conferir as fontes e executar validação HTML/CSS com o W3C, corrigindo eventuais mensagens.
-7. Em uma máquina com Docker, executar os dois comandos do README. Testar `/`, `/index.html`, demais páginas, `/assets/manejo.mp4` e uma URL inexistente (deve retornar 404).
-8. No Railway, selecionar a raiz do repositório, gerar domínio público e verificar healthcheck e páginas. Não adicionar banco.
-9. Para Pages, verificar elegibilidade e executar o workflow manual com a origem `src/`.
+Em evidencias/2026-11-06/: home-desktop-antes.png, home-desktop-depois.png, home-celular-antes.png, home-celular-depois.png, contato-antes.png, contato-depois.png, contato-erros-depois.png, contato-alto-contraste.png e libras-carregamento.png.
 
-Os documentos originais de escopo e atividade foram preservados. Esta implementação não altera a data, a equipe ou os objetivos acadêmicos originais.
+Os prints de antes vêm da cópia exata da base consultada, servida separadamente. Desktop e celular usam os mesmos tamanhos nas duas versões. Foram inspecionados visualmente os estados de celular e alto contraste; a inspeção não equivale a testes com todos os usuários.
+
+## Limites e pendências
+
+- Os testes foram locais. Ainda é necessário escolher o serviço, publicar e verificar a URL real com HTTPS, incluindo acesso sem login. Nenhum deploy foi realizado.
+- A navegação por teclado foi verificada nos caminhos descritos; não foi executado um ensaio humano de todos os links, controles nativos de mídia e recursos do tradutor em todas as páginas.
+- O axe deixou itens de inspeção manual registrados em incomplete, incluindo contraste sobre imagens e a avaliação do conteúdo do iframe. Zero violações automáticas não significa certificação WCAG. Não foi usado leitor de tela humano nem realizado teste com participantes PCD.
+- O reflow em 320 px foi verificado; não é uma alegação de teste de zoom nativo de 400% em todos os navegadores.
+- O VLibras foi conferido até carregamento do script e renderização do botão. A tradução e sua qualidade linguística não foram homologadas. A disponibilidade depende de terceiros.
+- Os abortos de mídia em navegador.json correspondem a navegações interrompidas; a falha de rede do script VLibras foi provocada no teste de recuperação. A reprodução efetiva posterior das mídias e o carregamento real do script estão registrados separadamente.
+- Feedback formal do MVP, RAs, participação de todos no GitHub e acesso do professor ainda exigem confirmação da equipe. Não houve apresentação nesta etapa.
+
+## Conferência manual rápida
+
+1. Servir a pasta src e navegar pelas dez páginas no computador e no celular.
+2. Usar Tab e Enter; ativar contraste e texto ampliado; abrir outra página e conferir as preferências.
+3. Enviar o formulário vazio, conferir os erros, preencher valores fictícios, confirmar e recarregar.
+4. Apagar o rascunho e recarregar novamente.
+5. Reproduzir vídeo e áudio, ativar legendas, conferir transcrições e abrir o iframe.
+6. Com internet, ativar Libras e avaliar o recurso com uma pessoa que utilize Libras.
+7. Após publicar, repetir na URL HTTPS e registrar o endereço no README e no orçamento.
+
+Ferramentas temporárias de verificação não são necessárias para executar o site. Nu Html Checker: https://validator.github.io/validator/. A auditoria automática utilizou axe-core; a reprodução e as interações foram verificadas no navegador.

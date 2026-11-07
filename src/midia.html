@@ -8,13 +8,35 @@
 <meta name="theme-color" content="#001d21">
 <link rel="icon" href="assets/simbolo.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/style.css">
+<script src="js/acessibilidade.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<div class="a11y-bar">
+  <div class="wrap a11y-inner">
+    <a href="acessibilidade.html">Recursos de acessibilidade</a>
+    <div id="controles-acessibilidade" class="a11y-controls" role="group" aria-label="Preferências de leitura" hidden>
+      <button id="alto-contraste" type="button" aria-pressed="false">Alto contraste</button>
+      <button id="texto-ampliado" type="button" aria-pressed="false">Texto ampliado</button>
+      <button id="ativar-libras" type="button" aria-describedby="aviso-acessibilidade">Ativar Libras</button>
+    </div>
+    <p id="aviso-acessibilidade" class="a11y-status" role="status"></p>
+  </div>
+</div>
 <header class="header"><div class="wrap topbar">
 <a class="brand" href="index.html" aria-label="AgroSustenta, início"><img src="assets/simbolo.svg" alt="" width="30" height="30">AgroSustenta</a><span class="header-note">CONHECIMENTO QUE CULTIVA O FUTURO</span><a class="pill small" href="projetos.html">Explore o projeto <span aria-hidden="true">↗</span></a>
 </div>
-<nav class="wrap nav" aria-label="Menu principal"><a href="index.html">Início</a><a href="sobre.html">Sobre</a><a href="projetos.html">Projetos</a><a href="impacto.html">Impacto</a><a href="acessibilidade.html">Acessibilidade</a><a href="galeria.html">Galeria</a><a href="midia.html" aria-current="page">Mídia</a><a href="noticias.html">Notícias</a><a href="contato.html">Contato</a><a href="orcamento_hospedagem.html">Hospedagem</a></nav></header>
+<nav class="wrap nav" aria-label="Menu principal"><a href="index.html">Início</a>
+<a href="sobre.html">Sobre</a>
+<a href="projetos.html">Projetos</a>
+<a href="impacto.html">Impacto</a>
+<a href="acessibilidade.html">Acessibilidade</a>
+<a href="galeria.html">Galeria</a>
+<a href="midia.html" aria-current="page">Mídia</a>
+<a href="noticias.html">Notícias</a>
+<a href="contato.html">Contato</a>
+<a href="orcamento_hospedagem.html">Hospedagem</a></nav></header>
 <main id="conteudo" tabindex="-1"><section class="page-intro wrap"><p class="eyebrow">AGROSUSTENTA / 06 / VER, OUVIR E APRENDER</p>
 <h1>Outras formas<br><mark>de compreender.</mark>
 </h1>
@@ -24,7 +46,7 @@
 <h2>Três perguntas<br>antes de fertilizar.</h2>
 </div>
 <div class="media-layout">
-<video controls preload="metadata" poster="assets/video-poster.webp" width="960" height="540" aria-label="Vídeo educativo: três perguntas antes de fertilizar"><source src="assets/manejo.mp4" type="video/mp4"><track kind="captions" src="assets/manejo.vtt" srclang="pt-BR" label="Português brasileiro" default><p>Seu navegador não reproduz este vídeo. <a href="assets/manejo.mp4">Baixe o vídeo educativo</a>.</p></track></source></video><div>
+<video controls preload="metadata" poster="assets/video-poster.webp" width="960" height="540" aria-label="Vídeo educativo: três perguntas antes de fertilizar"><source src="assets/manejo.webm" type="video/webm"><source src="assets/manejo.mp4" type="video/mp4"><track kind="captions" src="assets/manejo.vtt" srclang="pt-BR" label="Português brasileiro" default><p>Seu navegador não reproduz este vídeo. <a href="assets/manejo.mp4">Baixe o vídeo educativo</a>.</p></video><div>
 <span class="tag">PRODUÇÃO DIDÁTICA · CJM</span><h3>Diagnosticar, planejar, acompanhar.</h3>
 <p>Vídeo gráfico sem fala e sem trilha sonora. Todo o conteúdo aparece em texto e nas legendas. Não apresenta dosagens nem substitui orientação técnica.</p>
 <details><summary>Ler a transcrição integral</summary><p>Antes de fertilizar, faça três perguntas. Um: o que o solo precisa? A análise orienta o diagnóstico. Dois: o que a cultura precisa? Planeje o manejo com assistência técnica. Três: como acompanhar? Registre custos, produção e cuidados ambientais. Eficiência também é cuidar de quem produz. AgroSustenta, conhecimento que cultiva o futuro.</p></details>
@@ -32,20 +54,25 @@
 </div>
 </div></section><section class="section sage"><div class="wrap">
 <div class="section-head">
-<p class="eyebrow">02 / PODCAST INSTITUCIONAL</p>
-<h2>Bioinsumos<br>em conversa.</h2>
+<p class="eyebrow">02 / LEITURA EM ÁUDIO</p>
+<h2>Ouvir também<br>é um caminho.</h2>
 </div>
 <div class="split">
-<div>
-<span class="tag">MAPACAST · EPISÓDIO 24</span><h3>Programa Nacional de Bioinsumos</h3>
-<p>A coordenadora do programa explica a proposta de ampliar a utilização de recursos biológicos na agropecuária brasileira.</p>
-<audio controls preload="none" aria-label="Mapacast, episódio 24: Programa Nacional de Bioinsumos"><source src="https://www.gov.br/agricultura/pt-br/centrais-de-conteudo/audios/mapacast/episodio-24-programa-nacional-de-bioinsumos/epsodio-24-bioinsumos.mp3" type="audio/mpeg"><a href="https://www.gov.br/agricultura/pt-br/centrais-de-conteudo/audios/mapacast/episodio-24-programa-nacional-de-bioinsumos/epsodio-24-bioinsumos.mp3">Ouça o podcast na fonte <span aria-hidden="true">↗</span></a></source></audio><p><a href="https://www.gov.br/agricultura/pt-br/assuntos/inovacao/bioinsumos">Página oficial e fonte do áudio <span aria-hidden="true">↗</span></a> · <a href="https://www.gov.br/agricultura/pt-br/centrais-de-conteudo/audios/mapacast/episodio-24-programa-nacional-de-bioinsumos/epsodio-24-bioinsumos.mp3">Abrir áudio diretamente <span aria-hidden="true">↗</span></a></p>
-</div>
-<div>
-<h3>Resumo para leitura</h3>
-<p>A iniciativa busca fortalecer o uso de bioinsumos para o desenvolvimento sustentável da agropecuária. A página institucional apresenta aplicações em produção vegetal e animal, além de formação e inovação.</p>
-<p class="note">Este é um resumo editorial da apresentação institucional, não uma transcrição integral do episódio. A disponibilidade do áudio depende do MAPA.</p>
-</div>
+  <div>
+    <span class="tag">CONTEÚDO EDUCATIVO · CJM</span>
+    <h3>Três perguntas antes de fertilizar</h3>
+    <p>Leitura do texto do vídeo, em voz sintética em português. O áudio é local e tem transcrição integral ao lado.</p>
+    <audio controls preload="none" aria-label="Leitura: três perguntas antes de fertilizar" aria-describedby="transcricao-audio">
+      <source src="assets/leitura-manejo.mp3" type="audio/mpeg">
+      <a href="assets/leitura-manejo.mp3">Baixar a leitura em áudio</a>
+    </audio>
+    <p class="note">Texto da equipe CJM. Voz sintetizada com eSpeak NG; nenhuma voz de integrante foi imitada.</p>
+  </div>
+  <div>
+    <h3 id="transcricao-audio">Transcrição integral</h3>
+    <p>Antes de fertilizar, faça três perguntas. Um: o que o solo precisa? A análise orienta o diagnóstico. Dois: o que a cultura precisa? Planeje o manejo com assistência técnica. Três: como acompanhar? Registre custos, produção e cuidados ambientais. Eficiência também é cuidar de quem produz. AgroSustenta, conhecimento que cultiva o futuro.</p>
+    <p>Para aprofundar: <a href="https://www.gov.br/agricultura/pt-br/centrais-de-conteudo/audios/mapacast/episodio-24-programa-nacional-de-bioinsumos/epsodio-24-bioinsumos.mp3">podcast Mapacast sobre bioinsumos, no site do MAPA</a>. Esse material externo é complementar ao áudio local.</p>
+  </div>
 </div>
 </div></section><section class="section "><div class="wrap">
 <div class="section-head">
@@ -58,7 +85,17 @@
 <div class="footer-heading">
 <a class="brand" href="index.html">AgroSustenta</a><p>O futuro começa<br>no que a gente cultiva.</p>
 </div>
-<nav class="footer-nav" aria-label="Menu do rodapé"><a href="index.html">Início</a><a href="sobre.html">Sobre</a><a href="projetos.html">Projetos</a><a href="impacto.html">Impacto</a><a href="acessibilidade.html">Acessibilidade</a><a href="galeria.html">Galeria</a><a href="midia.html">Mídia</a><a href="noticias.html">Notícias</a><a href="contato.html">Contato</a><a href="orcamento_hospedagem.html">Hospedagem</a></nav><div class="footer-bottom">
+<nav class="footer-nav" aria-label="Menu do rodapé"><a href="index.html">Início</a>
+<a href="sobre.html">Sobre</a>
+<a href="projetos.html">Projetos</a>
+<a href="impacto.html">Impacto</a>
+<a href="acessibilidade.html">Acessibilidade</a>
+<a href="galeria.html">Galeria</a>
+<a href="midia.html">Mídia</a>
+<a href="noticias.html">Notícias</a>
+<a href="contato.html">Contato</a>
+<a href="orcamento_hospedagem.html">Hospedagem</a></nav><p class="footer-purpose">Educação para a sustentabilidade: <a href="sobre.html#ods">ODS 2, 12 e 15</a>. <a href="projetos.html#apoie">Saiba como apoiar</a>.</p>
+<div class="footer-bottom">
 <p>© 2026 · Equipe CJM · UNICID</p>
 <p>Projeto acadêmico. Informação aberta, impacto compartilhado.</p>
 <a href="acessibilidade.html">Compromisso com a inclusão ↗</a>

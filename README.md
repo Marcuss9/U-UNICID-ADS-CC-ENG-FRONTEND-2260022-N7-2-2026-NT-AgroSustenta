@@ -1,93 +1,80 @@
 # AgroSustenta
 
-Site acadêmico informativo sobre **Fertilizantes Sustentáveis: Impactos Ambientais e Sociais e sua Relação com a Eficiência e a Rentabilidade na Produção Agrícola**.
+Site acadêmico de Ciência da Computação da UNICID sobre fertilizantes sustentáveis, seus impactos ambientais e sociais e a relação com eficiência e rentabilidade agrícola.
 
-Implementação estática em **HTML5 e CSS3**, sem frameworks, gerenciador de pacotes, build ou backend de aplicação. O único JavaScript (`src/js/contato.js`, 347 bytes) apresenta a confirmação do formulário demonstrativo sem recarregar a página; a validação permanece nativa do HTML5. O site continua navegável sem JavaScript.
+HTML5, CSS3 e JavaScript básico, sem framework, build, banco ou servidor de aplicação. Dez páginas em `src/`, documentação em `docs/` e comentários curtos nos scripts.
 
-## Contexto e escopo
+## Equipe
 
-- Equipe CJM · UNICID · Professor Paulo Fratta · Ciência da Computação.
-- Integrantes: João Pedro Liberato de Oliveira; Marcus Vinicius dos Santos Cruz; Cauã Francisco Gomes da Silva.
-- Documento principal: [Escopo do Projeto](docs/Escopo_Projeto_Fertilizantes_Sustentaveis_CJM.pdf), especialmente seções 5, 6 e 12.
-- [Orientações da atividade](docs/ATIVIDADE%20A2%20PROJETO%20DE%20SITE%20FRONTEND.txt).
-- Data indicada no escopo original: 21/09/2026. Pesquisa desta implementação: 19/10/2026.
-- Público geral interessado em agricultura e sustentabilidade, considerando pessoas com deficiência na apresentação do conteúdo.
+- João Pedro Liberato de Oliveira.
+- Marcus Vinicius dos Santos Cruz.
+- Cauã Francisco Gomes da Silva.
 
-## Executar localmente
+Equipe CJM. Professor Paulo Fratta. Os RAs ainda precisam ser informados pela equipe.
 
-Abra `src/index.html` no navegador para conhecer as páginas. Para testar também o iframe e as legendas do vídeo sob HTTP, sirva a pasta `src/` com qualquer servidor estático. Exemplo com Python, se já estiver instalado na máquina:
+## Links e estado da entrega
+
+- Repositório: https://github.com/Marcuss9/U-UNICID-ADS-CC-ENG-FRONTEND-2260022-N7-2-2026-NT-AgroSustenta
+- URL pública do site: pendente de publicação e confirmação.
+- Revisão local: 06/11/2026, a partir do commit `55ef626b6f7029bf23289a7f799b54574b6f1a57` da branch main.
+- Apresentação e slides: fora desta etapa, a pedido do responsável.
+
+## Executar
+
+Abra `src/index.html` no navegador. Para testar mídia, rascunho e navegação em uma origem HTTP, sirva `src/` com um servidor estático, por exemplo:
 
 ```sh
 python3 -m http.server 8080 --directory src
 ```
 
-Visite `http://localhost:8080`. Python é apenas uma opção de ferramenta local; não faz parte do site nem da imagem de produção. Nenhum pacote precisa ser instalado.
+Acesse `http://localhost:8080`. Python serve apenas para a prévia; não faz parte do site.
 
-## Dez páginas
+## Páginas
 
-| Arquivo em `src/` | Conteúdo |
+| Arquivo | Conteúdo |
 | --- | --- |
-| `index.html` | Apresentação, contexto e caminhos de leitura |
-| `sobre.html` | História, missão, visão, valores e conceitos |
-| `projetos.html` | Iniciativas reais e oficina fictícia identificada |
-| `impacto.html` | Indicadores institucionais e comparação econômica simulada |
-| `acessibilidade.html` | Recursos de inclusão, orientações e limites |
-| `galeria.html` | Fotografias ilustrativas com legendas, autoria e fontes |
-| `midia.html` | Vídeo local com legendas, podcast institucional e iframe local |
-| `noticias.html` | Notícia institucional e artigos educativos da equipe |
-| `contato.html` | Formulário demonstrativo, contato fictício e integrantes |
-| `orcamento_hospedagem.html` | Comparativo de hospedagem/domínio e orçamento simulado |
+| index.html | Apresentação e caminhos de leitura |
+| sobre.html | Proposta, conceitos e relação com ODS 2, 12 e 15 |
+| projetos.html | Iniciativas e formas de apoio, com voluntariado simulado |
+| impacto.html | Dados com fontes e comparação econômica simulada |
+| acessibilidade.html | Como usar teclado, contraste, texto ampliado e Libras |
+| galeria.html | Fotos com legendas e créditos |
+| midia.html | Vídeo legendado, áudio local com transcrição e iframe |
+| noticias.html | Notícia institucional e leituras da equipe |
+| contato.html | Formulário demonstrativo e equipe |
+| orcamento_hospedagem.html | Comparativo e orientação de hospedagem |
 
-As dez páginas estão no menu principal e no rodapé. A antiga localização `docs/orcamento_hospedagem.html` contém um link para a página atual. `src/assets/quadro.html` é um recurso interno do iframe, não uma décima primeira página do menu.
+`src/assets/quadro.html` é um recurso do iframe, fora da contagem das dez páginas principais.
 
-## Design e conteúdo
+## Interações simples
 
-O redesign adapta a linguagem editorial do [AngelList](https://www.angellist.com/) e da [referência AngelList no Refero](https://styles.refero.design/style/6db40006-05ac-4770-b63e-dfd9ebfd534c): tipografia ampla, superfícies planas, verde profundo, lavanda e botões arredondados. A marca, os textos e a composição foram adaptados ao AgroSustenta; não são uma cópia do site de referência. A fonte é do sistema, sem download externo.
+- `js/contato.js`: valida os campos, mostra os erros, destaca as bordas e salva/restaura o rascunho pelo localStorage. O botão de apagar remove esse rascunho. A confirmação do usuário não é salva.
+- `js/acessibilidade.js`: alterna contraste e tamanho de texto, salva preferências e carrega o VLibras quando solicitado.
+- O formulário não envia dados. Use valores fictícios. Sem JavaScript, a validação HTML permanece disponível e os valores não entram na URL, pois os campos não têm atributo name.
+- Preferências e rascunho ficam na origem do navegador. Outra hospedagem ou outro navegador não compartilha esses dados. Falhas de armazenamento mostram aviso e não impedem o formulário.
 
-Fontes dos dados, período de referência e distinção entre fatos e simulações estão nas páginas e em [Fontes e conteúdo](docs/FONTES.md). Não há resultados de campo atribuídos ao AgroSustenta. Contatos usam o domínio reservado `.example`.
+## Acessibilidade e conteúdo
 
-- O vídeo educativo local é gráfico, sem áudio, tem 30 segundos, legendas WebVTT e transcrição integral.
-- O áudio é o episódio 24 do Mapacast, carregado sob demanda diretamente do MAPA. A página oferece resumo editorial e link direto; não inclui transcrição integral do episódio.
-- O iframe incorpora um quadro educativo local e não depende de um serviço de terceiros.
-- As fotos locais WebP são ilustrativas; não demonstram uma técnica agrícola e não são apresentadas como paisagens brasileiras.
+Há foco visível, link de salto, rótulos, mensagens textuais de erro, imagens com alt, mídias sem autoplay e legendas/transcrições. O texto pode ser ampliado em 25% e o alto contraste pode ser alternado no topo de todas as páginas.
 
-## Formulário: demonstração
+O VLibras é carregado do endereço oficial somente após ativação. Depende de internet e de um serviço externo; a tradução automática pode ter limitações. Fonte: [manual oficial](https://vlibras.gov.br/doc/widget/installation/webpageintegration.html).
 
-Campos com `required`, `type="email"`, limites de comprimento e rótulos associados. Não envia e-mail, não salva dados, não faz chamadas de API e não usa armazenamento do navegador. Os campos não têm atributo `name`, de modo que valores não entram na URL nem com JavaScript desligado. O visitante é orientado a usar valores fictícios.
+O vídeo local permanece preservado. A leitura em áudio usa o mesmo texto da transcrição do vídeo, com voz sintética do eSpeak NG. O podcast do MAPA continua como leitura complementar externa. Fontes e créditos: [FONTES](docs/FONTES.md).
 
-## Railway
+O visual existente foi preservado: verde profundo, lavanda e fontes do sistema, com referência editorial AngelList/Refero registrada em FONTES. Simulações não são apresentadas como atividades ou resultados reais.
 
-A preparação para publicação usa somente **Nginx para servir os arquivos estáticos**. Não há servidor de aplicação, banco, login ou serviço adicional.
+## Publicação
 
-1. Crie um projeto no Railway a partir deste repositório e selecione a branch desejada.
-2. Mantenha a **raiz do repositório** como Root Directory. Não selecione `src/`.
-3. O `railway.toml` seleciona o `Dockerfile`; não configure comandos de instalação, build ou start personalizados.
-4. A imagem oficial do Nginx processa `deploy/default.conf.template` na inicialização e escuta em `0.0.0.0:$PORT` (padrão local `8080`). O healthcheck é `/index.html`.
-5. Em Networking, gere um domínio público. Confira o menu, as dez páginas, o vídeo e o podcast.
+Railway não é obrigatório. Publique a pasta `src/` em um serviço de arquivos estáticos com HTTPS, sem comando de build. O domínio fornecido pelo serviço é suficiente; domínio próprio é opcional.
 
-Teste opcional em uma máquina com Docker:
+- GitHub Pages: workflow manual em `.github/workflows/pages.yml`; conferir acesso e elegibilidade do repositório privado antes de usar.
+- Outro serviço estático: usar `src/` como pasta de publicação e conferir todas as rotas e mídias pela URL final.
+- Railway: configuração opcional preservada. Nesse caso, usar a raiz do repositório para o Dockerfile, Nginx e variável PORT. Não é necessário acrescentar banco.
 
-```sh
-docker build -t agrosustenta .
-docker run --rm -e PORT=8080 -p 8080:8080 agrosustenta
-```
+A preferência técnica é hospedagem estática, pois atende ao projeto com menos configuração. O provedor efetivo, o custo e a URL final devem ser registrados depois da escolha e da publicação. A simulação Railway do orçamento não é contratação nem custo da opção escolhida.
 
-Este trabalho **prepara** o deploy: não cria projeto no Railway, não contrata recursos e não publica automaticamente. Preços e condições podem mudar; consulte a [tabela oficial](https://railway.com/pricing).
+## Documentação
 
-## GitHub Pages
+Veja [índice de documentos](docs/README.md), [diário](docs/DIARIO_DE_BORDO.md), [melhorias](docs/MELHORIAS_MVP.md), [uso de IA](docs/USO_DE_IA.md), [objetivos e aceite](docs/OBJETIVOS_E_ACEITE.md) e [testes](docs/VALIDACAO.md).
 
-O escopo original prevê publicação demonstrativa no Pages. O workflow `.github/workflows/pages.yml` é **manual** (`workflow_dispatch`) e publica somente `src/`, sem build.
-
-1. Confira a elegibilidade do plano: o GitHub Free oferece Pages em repositórios públicos; este repositório é privado.
-2. Em Settings → Pages, selecione GitHub Actions, se disponível.
-3. Execute “Publicar site estático no GitHub Pages” na branch desejada.
-
-Não é necessário mover as páginas para a raiz. Todos os caminhos são relativos, inclusive o iframe e as legendas, para funcionar sob o prefixo do repositório.
-
-## Verificação
-
-Consulte [Validação e pendências](docs/VALIDACAO.md) para os resultados reais e o roteiro de revisão manual. A implementação inclui medidas de acessibilidade; não declara certificação WCAG nem validação W3C que não tenha sido executada.
-
-## Orientações de manutenção
-
-Leia o PDF e confira o estado real dos arquivos antes de editar. Preserve o escopo informativo e a base HTML5/CSS3; use JavaScript apenas para interação indispensável. Não acrescente autenticação, banco, backend, comércio eletrônico ou dependências sem solicitação. Atualize os mesmos componentes nas dez páginas, preserve caminhos relativos e identifique fontes e simulações. Respeite a autorização da tarefa para commits, PRs, merge e publicação; este README não concede autorização para essas ações.
+Os arquivos acadêmicos originais foram preservados. O complemento [ESCOPO_FINAL](docs/ESCOPO_FINAL.md) registra os requisitos da segunda entrega e a alteração de hospedagem. Resultados locais não comprovam publicação nem apresentação.

@@ -8,13 +8,35 @@
 <meta name="theme-color" content="#001d21">
 <link rel="icon" href="assets/simbolo.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/style.css">
+<script src="js/acessibilidade.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<div class="a11y-bar">
+  <div class="wrap a11y-inner">
+    <a href="acessibilidade.html">Recursos de acessibilidade</a>
+    <div id="controles-acessibilidade" class="a11y-controls" role="group" aria-label="Preferências de leitura" hidden>
+      <button id="alto-contraste" type="button" aria-pressed="false">Alto contraste</button>
+      <button id="texto-ampliado" type="button" aria-pressed="false">Texto ampliado</button>
+      <button id="ativar-libras" type="button" aria-describedby="aviso-acessibilidade">Ativar Libras</button>
+    </div>
+    <p id="aviso-acessibilidade" class="a11y-status" role="status"></p>
+  </div>
+</div>
 <header class="header"><div class="wrap topbar">
 <a class="brand" href="index.html" aria-label="AgroSustenta, início"><img src="assets/simbolo.svg" alt="" width="30" height="30">AgroSustenta</a><span class="header-note">CONHECIMENTO QUE CULTIVA O FUTURO</span><a class="pill small" href="projetos.html">Explore o projeto <span aria-hidden="true">↗</span></a>
 </div>
-<nav class="wrap nav" aria-label="Menu principal"><a href="index.html">Início</a><a href="sobre.html">Sobre</a><a href="projetos.html">Projetos</a><a href="impacto.html">Impacto</a><a href="acessibilidade.html" aria-current="page">Acessibilidade</a><a href="galeria.html">Galeria</a><a href="midia.html">Mídia</a><a href="noticias.html">Notícias</a><a href="contato.html">Contato</a><a href="orcamento_hospedagem.html">Hospedagem</a></nav></header>
+<nav class="wrap nav" aria-label="Menu principal"><a href="index.html">Início</a>
+<a href="sobre.html">Sobre</a>
+<a href="projetos.html">Projetos</a>
+<a href="impacto.html">Impacto</a>
+<a href="acessibilidade.html" aria-current="page">Acessibilidade</a>
+<a href="galeria.html">Galeria</a>
+<a href="midia.html">Mídia</a>
+<a href="noticias.html">Notícias</a>
+<a href="contato.html">Contato</a>
+<a href="orcamento_hospedagem.html">Hospedagem</a></nav></header>
 <main id="conteudo" tabindex="-1"><section class="page-intro wrap"><p class="eyebrow">AGROSUSTENTA / 04 / ACESSO PARA TODOS</p>
 <h1>Conhecimento aberto.<br><mark>Sem deixar ninguém de fora.</mark>
 </h1>
@@ -25,7 +47,7 @@
 </div>
 <div class="grid three">
 <article class="card"><span class="card-number">01</span><h3>Pelo teclado</h3>
-<p>Use Tab e Shift+Tab para percorrer links e controles. Enter ativa links; Espaço abre os resumos e aciona controles nativos. O foco recebe contorno visível.</p></article><article class="card"><span class="card-number">02</span><h3>Com leitor de tela</h3>
+<p>Use Tab e Shift+Tab para percorrer links e controles. Enter ativa links; Espaço abre os resumos e aciona controles nativos. O foco recebe contorno visível. Os botões no início de cada página permitem alternar o alto contraste e ampliar o texto. As preferências ficam salvas neste navegador.</p></article><article class="card"><span class="card-number">02</span><h3>Com leitor de tela</h3>
 <p>Títulos, regiões, tabelas, campos rotulados e textos alternativos dão estrutura à leitura. O link “Pular para o conteúdo” aparece ao receber foco.</p></article><article class="card"><span class="card-number">03</span><h3>Com zoom</h3>
 <p>Aumente o zoom pelo navegador. O layout se reorganiza em telas menores, e tabelas têm rolagem própria quando necessário.</p></article>
 </div>
@@ -49,19 +71,30 @@
 <ul class="plain-list">
 <li>Sem reprodução automática de áudio ou vídeo.</li>
 <li>Vídeo educativo local com legendas e transcrição.</li>
-<li>Resumo textual junto ao podcast externo.</li>
+<li>Áudio educativo local com transcrição integral e sem reprodução automática.</li>
+<li>VLibras oficial, carregado apenas quando você ativa o recurso no topo da página.</li>
 <li>Preferências de redução de movimento respeitadas.</li>
 </ul>
 </div>
 </div>
-<p class="note">Essas medidas não equivalem a uma certificação de conformidade. O podcast de terceiros não dispõe de transcrição integral nesta página; oferecemos um resumo e o link de origem. Se encontrar uma barreira, use o formulário demonstrativo para testar o relato.</p>
+<p class="note">Você pode ativar Libras no topo da página. O VLibras é um tradutor automático de terceiros, depende de internet e pode apresentar limitações de tradução. Alto contraste, texto ampliado e conteúdo textual funcionam sem esse serviço. O formulário salva um rascunho local, que pode ser apagado. Se encontrar uma barreira, use o formulário demonstrativo para testar o relato.</p>
 <a class="pill" href="contato.html">Testar um relato de acessibilidade ↗</a>
 </div></section></main>
 <footer class="footer"><div class="wrap">
 <div class="footer-heading">
 <a class="brand" href="index.html">AgroSustenta</a><p>O futuro começa<br>no que a gente cultiva.</p>
 </div>
-<nav class="footer-nav" aria-label="Menu do rodapé"><a href="index.html">Início</a><a href="sobre.html">Sobre</a><a href="projetos.html">Projetos</a><a href="impacto.html">Impacto</a><a href="acessibilidade.html">Acessibilidade</a><a href="galeria.html">Galeria</a><a href="midia.html">Mídia</a><a href="noticias.html">Notícias</a><a href="contato.html">Contato</a><a href="orcamento_hospedagem.html">Hospedagem</a></nav><div class="footer-bottom">
+<nav class="footer-nav" aria-label="Menu do rodapé"><a href="index.html">Início</a>
+<a href="sobre.html">Sobre</a>
+<a href="projetos.html">Projetos</a>
+<a href="impacto.html">Impacto</a>
+<a href="acessibilidade.html">Acessibilidade</a>
+<a href="galeria.html">Galeria</a>
+<a href="midia.html">Mídia</a>
+<a href="noticias.html">Notícias</a>
+<a href="contato.html">Contato</a>
+<a href="orcamento_hospedagem.html">Hospedagem</a></nav><p class="footer-purpose">Educação para a sustentabilidade: <a href="sobre.html#ods">ODS 2, 12 e 15</a>. <a href="projetos.html#apoie">Saiba como apoiar</a>.</p>
+<div class="footer-bottom">
 <p>© 2026 · Equipe CJM · UNICID</p>
 <p>Projeto acadêmico. Informação aberta, impacto compartilhado.</p>
 <a href="acessibilidade.html">Compromisso com a inclusão ↗</a>

@@ -9,13 +9,35 @@
 <link rel="icon" href="assets/simbolo.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/style.css">
 <script src="js/contato.js" defer></script>
+<script src="js/acessibilidade.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<div class="a11y-bar">
+  <div class="wrap a11y-inner">
+    <a href="acessibilidade.html">Recursos de acessibilidade</a>
+    <div id="controles-acessibilidade" class="a11y-controls" role="group" aria-label="Preferências de leitura" hidden>
+      <button id="alto-contraste" type="button" aria-pressed="false">Alto contraste</button>
+      <button id="texto-ampliado" type="button" aria-pressed="false">Texto ampliado</button>
+      <button id="ativar-libras" type="button" aria-describedby="aviso-acessibilidade">Ativar Libras</button>
+    </div>
+    <p id="aviso-acessibilidade" class="a11y-status" role="status"></p>
+  </div>
+</div>
 <header class="header"><div class="wrap topbar">
 <a class="brand" href="index.html" aria-label="AgroSustenta, início"><img src="assets/simbolo.svg" alt="" width="30" height="30">AgroSustenta</a><span class="header-note">CONHECIMENTO QUE CULTIVA O FUTURO</span><a class="pill small" href="projetos.html">Explore o projeto <span aria-hidden="true">↗</span></a>
 </div>
-<nav class="wrap nav" aria-label="Menu principal"><a href="index.html">Início</a><a href="sobre.html">Sobre</a><a href="projetos.html">Projetos</a><a href="impacto.html">Impacto</a><a href="acessibilidade.html">Acessibilidade</a><a href="galeria.html">Galeria</a><a href="midia.html">Mídia</a><a href="noticias.html">Notícias</a><a href="contato.html" aria-current="page">Contato</a><a href="orcamento_hospedagem.html">Hospedagem</a></nav></header>
+<nav class="wrap nav" aria-label="Menu principal"><a href="index.html">Início</a>
+<a href="sobre.html">Sobre</a>
+<a href="projetos.html">Projetos</a>
+<a href="impacto.html">Impacto</a>
+<a href="acessibilidade.html">Acessibilidade</a>
+<a href="galeria.html">Galeria</a>
+<a href="midia.html">Mídia</a>
+<a href="noticias.html">Notícias</a>
+<a href="contato.html" aria-current="page">Contato</a>
+<a href="orcamento_hospedagem.html">Hospedagem</a></nav></header>
 <main id="conteudo" tabindex="-1"><section class="page-intro wrap"><p class="eyebrow">AGROSUSTENTA / 08 / CONVERSA ABERTA</p>
 <h1>Boas perguntas<br><mark>fazem crescer.</mark>
 </h1>
@@ -27,20 +49,33 @@
 <div class="split contact">
 <div>
 <span class="tag">AMBIENTE ACADÊMICO</span><p class="lead">Este formulário simula o contato.</p>
-<p>Não envia nem armazena dados. Use valores fictícios para testar os campos. O endereço abaixo também é fictício.</p>
+<p>Não envia mensagens. Com JavaScript, salva um rascunho apenas neste navegador. Use dados fictícios; você pode apagá-los a qualquer momento. O endereço abaixo também é fictício.</p>
 <p>contato@agrosustenta.example<br>São Paulo, SP · Brasil</p>
 <p>A educação ambiental fica mais forte quando mais pessoas podem participar.</p>
 </div>
 <form id="contato-form" action="contato.html#demonstracao" method="get">
 <fieldset>
 <legend>Teste uma mensagem</legend>
-<label for="nome">Nome <span>(obrigatório)</span></label><input id="nome" type="text" required minlength="2" maxlength="100" autocomplete="name" placeholder="Ex.: Ana Silva"><label for="email">E-mail <span>(obrigatório)</span></label><input id="email" type="email" required maxlength="150" autocomplete="email" placeholder="ana@example.com"><label for="assunto">Assunto <span>(obrigatório)</span></label><select id="assunto" required><option value="">Selecione uma opção</option>
+<label for="nome">Nome <span>(obrigatório)</span></label><input id="nome" aria-describedby="erro-nome" type="text" required minlength="2" maxlength="100" autocomplete="name" placeholder="Ex.: Ana Silva">
+<p id="erro-nome" class="field-error" aria-live="polite"></p>
+<label for="email">E-mail <span>(obrigatório)</span></label><input id="email" aria-describedby="erro-email" type="email" required maxlength="150" autocomplete="email" placeholder="ana@example.com">
+<p id="erro-email" class="field-error" aria-live="polite"></p>
+<label for="assunto">Assunto <span>(obrigatório)</span></label><select id="assunto" aria-describedby="erro-assunto" required><option value="">Selecione uma opção</option>
 <option>Conteúdo e fontes</option>
 <option>Acessibilidade</option>
-<option>Sugestão para o projeto</option></select><label for="mensagem">Mensagem <span>(obrigatório, mínimo de 10 caracteres)</span></label><textarea id="mensagem" required minlength="10" maxlength="2000" rows="5" placeholder="Escreva uma mensagem de teste."></textarea><label class="check"><input type="checkbox" required> Entendi que esta é uma demonstração e que não há envio de mensagem.</label><button class="pill" type="submit">Testar mensagem <span aria-hidden="true">↗</span></button>
+<option>Sugestão para o projeto</option>
+<option>Apoio e voluntariado</option></select>
+<p id="erro-assunto" class="field-error" aria-live="polite"></p>
+<label for="mensagem">Mensagem <span>(obrigatório, mínimo de 10 caracteres)</span></label><textarea id="mensagem" aria-describedby="erro-mensagem" required minlength="10" maxlength="2000" rows="5" placeholder="Escreva uma mensagem de teste."></textarea>
+<p id="erro-mensagem" class="field-error" aria-live="polite"></p>
+<label class="check" for="confirmacao"><input id="confirmacao" type="checkbox" aria-describedby="erro-confirmacao" required> Entendi que esta é uma demonstração e que não há envio de mensagem.</label>
+<p id="erro-confirmacao" class="field-error" aria-live="polite"></p>
+<button class="pill" type="submit">Testar mensagem <span aria-hidden="true">↗</span></button>
+<button id="limpar-rascunho" class="pill secondary" type="button" hidden>Apagar rascunho</button>
+<p id="aviso-rascunho" class="note" role="status">Com JavaScript, o rascunho fica salvo neste navegador.</p>
 </fieldset>
-<p id="demonstracao" class="form-status" role="status" tabindex="-1">Demonstração concluída. Nenhuma mensagem foi enviada ou armazenada.</p>
-<noscript><p>Sem JavaScript, a validação nativa funciona e o formulário leva ao aviso de demonstração. Os campos não possuem atributo name e não são incluídos na URL.</p></noscript>
+<p id="demonstracao" class="form-status" role="status" tabindex="-1">Demonstração concluída. Nenhuma mensagem foi enviada.</p>
+<noscript><p>Sem JavaScript, a validação nativa funciona e o formulário leva ao aviso de demonstração. Não há rascunho salvo nesse modo. Os campos não possuem atributo name e não são incluídos na URL.</p></noscript>
 </form>
 </div>
 </div></section><section class="section sage"><div class="wrap">
@@ -60,7 +95,17 @@
 <div class="footer-heading">
 <a class="brand" href="index.html">AgroSustenta</a><p>O futuro começa<br>no que a gente cultiva.</p>
 </div>
-<nav class="footer-nav" aria-label="Menu do rodapé"><a href="index.html">Início</a><a href="sobre.html">Sobre</a><a href="projetos.html">Projetos</a><a href="impacto.html">Impacto</a><a href="acessibilidade.html">Acessibilidade</a><a href="galeria.html">Galeria</a><a href="midia.html">Mídia</a><a href="noticias.html">Notícias</a><a href="contato.html">Contato</a><a href="orcamento_hospedagem.html">Hospedagem</a></nav><div class="footer-bottom">
+<nav class="footer-nav" aria-label="Menu do rodapé"><a href="index.html">Início</a>
+<a href="sobre.html">Sobre</a>
+<a href="projetos.html">Projetos</a>
+<a href="impacto.html">Impacto</a>
+<a href="acessibilidade.html">Acessibilidade</a>
+<a href="galeria.html">Galeria</a>
+<a href="midia.html">Mídia</a>
+<a href="noticias.html">Notícias</a>
+<a href="contato.html">Contato</a>
+<a href="orcamento_hospedagem.html">Hospedagem</a></nav><p class="footer-purpose">Educação para a sustentabilidade: <a href="sobre.html#ods">ODS 2, 12 e 15</a>. <a href="projetos.html#apoie">Saiba como apoiar</a>.</p>
+<div class="footer-bottom">
 <p>© 2026 · Equipe CJM · UNICID</p>
 <p>Projeto acadêmico. Informação aberta, impacto compartilhado.</p>
 <a href="acessibilidade.html">Compromisso com a inclusão ↗</a>

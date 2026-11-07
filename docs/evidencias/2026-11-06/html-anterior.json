@@ -1,0 +1,38 @@
+{
+  "version": "26.11.4 (26b30ab)",
+  "messages": [
+    {
+      "type": "error",
+      "url": "file:/home/jj/Documents/Codex/2026-11-06/peg/work/original/src/midia.html",
+      "lastLine": 27,
+      "lastColumn": 418,
+      "firstColumn": 411,
+      "message": "Stray end tag “track”.",
+      "extract": "o</a>.</p></track></sour",
+      "hiliteStart": 10,
+      "hiliteLength": 8
+    },
+    {
+      "type": "error",
+      "url": "file:/home/jj/Documents/Codex/2026-11-06/peg/work/original/src/midia.html",
+      "lastLine": 27,
+      "lastColumn": 427,
+      "firstColumn": 419,
+      "message": "Stray end tag “source”.",
+      "extract": "p></track></source></vide",
+      "hiliteStart": 10,
+      "hiliteLength": 9
+    },
+    {
+      "type": "error",
+      "url": "file:/home/jj/Documents/Codex/2026-11-06/peg/work/original/src/midia.html",
+      "lastLine": 42,
+      "lastColumn": 499,
+      "firstColumn": 491,
+      "message": "Stray end tag “source”.",
+      "extract": "/span></a></source></audi",
+      "hiliteStart": 10,
+      "hiliteLength": 9
+    }
+  ]
+}

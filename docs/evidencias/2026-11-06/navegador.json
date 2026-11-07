@@ -1,0 +1,107 @@
+{
+  "date": "2026-11-06",
+  "checks": [
+    {
+      "name": "Dez páginas em 360, 768 e 1440 px, sem overflow e sem recursos locais ausentes",
+      "status": "pass"
+    },
+    {
+      "name": "Formulário vazio: cinco mensagens e foco no primeiro erro",
+      "status": "pass"
+    },
+    {
+      "name": "Validação rejeita espaços, e-mail inválido e mensagem curta",
+      "status": "pass"
+    },
+    {
+      "name": "Envio válido demonstrativo: sem transmissão e rascunho recuperado",
+      "status": "pass"
+    },
+    {
+      "name": "Apagar rascunho limpa campos e armazenamento, inclusive após recarregar",
+      "status": "pass"
+    },
+    {
+      "name": "Dados de armazenamento corrompidos não quebram os controles",
+      "status": "pass"
+    },
+    {
+      "name": "Preferências por teclado, persistência entre páginas e ampliação real do texto",
+      "status": "pass"
+    },
+    {
+      "name": "Dez páginas com alto contraste e texto ampliado, reflow em 320 e 1440 px",
+      "status": "pass"
+    },
+    {
+      "name": "Teclado: salto ao conteúdo e todos os controles no fluxo de Tab",
+      "status": "pass"
+    },
+    {
+      "name": "Áudio, vídeo, legendas e iframe locais carregam",
+      "status": "pass"
+    },
+    {
+      "name": "Prints reais de antes e depois, desktop e celular",
+      "status": "pass"
+    },
+    {
+      "name": "Sem JavaScript: conteúdo e formulário nativo continuam disponíveis",
+      "status": "pass"
+    },
+    {
+      "name": "Armazenamento bloqueado: controles funcionam e há aviso",
+      "status": "pass"
+    },
+    {
+      "name": "Falha de rede do VLibras permite tentar novamente",
+      "status": "pass"
+    },
+    {
+      "name": "Carregamento real do script oficial de Libras",
+      "status": "pass"
+    }
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "networkFailures": [
+    {
+      "url": "http://127.0.0.1:8765/assets/manejo.webm",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    },
+    {
+      "url": "http://127.0.0.1:8765/assets/manejo.webm",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    },
+    {
+      "url": "https://vlibras.gov.br/app/vlibras-plugin.js",
+      "failure": {
+        "errorText": "net::ERR_FAILED"
+      }
+    }
+  ],
+  "media": [
+    {
+      "tag": "VIDEO",
+      "source": "http://127.0.0.1:8765/assets/manejo.webm",
+      "duration": 30.042,
+      "currentTime": 0.703886,
+      "error": null
+    },
+    {
+      "tag": "AUDIO",
+      "source": "http://127.0.0.1:8765/assets/leitura-manejo.mp3",
+      "duration": 28.137732,
+      "currentTime": 0.651949,
+      "error": null
+    }
+  ],
+  "libras": {
+    "VLibras": "object",
+    "VLibrasWidget": "object"
+  }
+}

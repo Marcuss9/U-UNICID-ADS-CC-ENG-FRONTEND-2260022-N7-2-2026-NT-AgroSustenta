@@ -1,0 +1,166 @@
+{
+  "date": "2026-11-06",
+  "engine": "axe-core 4.10.3",
+  "results": [
+    {
+      "file": "acessibilidade.html",
+      "mode": "padrao",
+      "violations": [],
+      "incomplete": [],
+      "passes": 24
+    },
+    {
+      "file": "contato.html",
+      "mode": "padrao",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ],
+      "passes": 26
+    },
+    {
+      "file": "galeria.html",
+      "mode": "padrao",
+      "violations": [],
+      "incomplete": [],
+      "passes": 22
+    },
+    {
+      "file": "impacto.html",
+      "mode": "padrao",
+      "violations": [],
+      "incomplete": [],
+      "passes": 26
+    },
+    {
+      "file": "index.html",
+      "mode": "padrao",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 2
+        }
+      ],
+      "passes": 22
+    },
+    {
+      "file": "midia.html",
+      "mode": "padrao",
+      "violations": [],
+      "incomplete": [],
+      "passes": 26
+    },
+    {
+      "file": "noticias.html",
+      "mode": "padrao",
+      "violations": [],
+      "incomplete": [],
+      "passes": 22
+    },
+    {
+      "file": "orcamento_hospedagem.html",
+      "mode": "padrao",
+      "violations": [],
+      "incomplete": [],
+      "passes": 26
+    },
+    {
+      "file": "projetos.html",
+      "mode": "padrao",
+      "violations": [],
+      "incomplete": [],
+      "passes": 24
+    },
+    {
+      "file": "sobre.html",
+      "mode": "padrao",
+      "violations": [],
+      "incomplete": [],
+      "passes": 25
+    },
+    {
+      "file": "acessibilidade.html",
+      "mode": "alto-contraste",
+      "violations": [],
+      "incomplete": [],
+      "passes": 24
+    },
+    {
+      "file": "contato.html",
+      "mode": "alto-contraste",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ],
+      "passes": 26
+    },
+    {
+      "file": "galeria.html",
+      "mode": "alto-contraste",
+      "violations": [],
+      "incomplete": [],
+      "passes": 22
+    },
+    {
+      "file": "impacto.html",
+      "mode": "alto-contraste",
+      "violations": [],
+      "incomplete": [],
+      "passes": 26
+    },
+    {
+      "file": "index.html",
+      "mode": "alto-contraste",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 2
+        }
+      ],
+      "passes": 22
+    },
+    {
+      "file": "midia.html",
+      "mode": "alto-contraste",
+      "violations": [],
+      "incomplete": [],
+      "passes": 26
+    },
+    {
+      "file": "noticias.html",
+      "mode": "alto-contraste",
+      "violations": [],
+      "incomplete": [],
+      "passes": 22
+    },
+    {
+      "file": "orcamento_hospedagem.html",
+      "mode": "alto-contraste",
+      "violations": [],
+      "incomplete": [],
+      "passes": 26
+    },
+    {
+      "file": "projetos.html",
+      "mode": "alto-contraste",
+      "violations": [],
+      "incomplete": [],
+      "passes": 24
+    },
+    {
+      "file": "sobre.html",
+      "mode": "alto-contraste",
+      "violations": [],
+      "incomplete": [],
+      "passes": 25
+    }
+  ]
+}
