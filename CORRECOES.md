@@ -55,3 +55,7 @@ Nenhum commit, push, PR ou deploy foi realizado nesta revisão. O prompt perdido
 | Alterado | src/orcamento_hospedagem.html |
 | Alterado | src/projetos.html |
 | Alterado | src/sobre.html |
+
+## Revisão adicional de acessibilidade
+
+Foco em duas cores, contraste fixo na legenda, resumo navegável de erros e preferências aplicadas ao iframe. Teclado conferido nas dez páginas. Ver docs/ACESSIBILIDADE.md para evidências e limites.

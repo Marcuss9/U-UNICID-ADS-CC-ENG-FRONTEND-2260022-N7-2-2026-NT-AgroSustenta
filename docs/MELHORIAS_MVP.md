@@ -22,3 +22,8 @@ Os prints em evidencias/2026-11-06/ mostram a versão consultada e a revisada no
 ## Ainda depende de confirmação
 
 Feedback original do professor, participação real de todos no GitHub, publicação e URL HTTPS. Esses itens não são marcados como resolvidos por alterações locais.
+
+
+## Complemento de acessibilidade após 6da7993
+
+Foco em duas cores, fundo sólido da legenda, menus com maior área de interação, resumo navegável dos erros e preferências sincronizadas com o iframe. O contraste antes dependente da imagem foi substituído por cores fixas; a sequência de teclado foi conferida nas dez páginas. Veja ACESSIBILIDADE.md e as evidências em evidencias/2026-11-06-acessibilidade/.

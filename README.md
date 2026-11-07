@@ -78,3 +78,5 @@ A preferência técnica é hospedagem estática, pois atende ao projeto com meno
 Veja [índice de documentos](docs/README.md), [diário](docs/DIARIO_DE_BORDO.md), [melhorias](docs/MELHORIAS_MVP.md), [uso de IA](docs/USO_DE_IA.md), [objetivos e aceite](docs/OBJETIVOS_E_ACEITE.md) e [testes](docs/VALIDACAO.md).
 
 Os arquivos acadêmicos originais foram preservados. O complemento [ESCOPO_FINAL](docs/ESCOPO_FINAL.md) registra os requisitos da segunda entrega e a alteração de hospedagem. Resultados locais não comprovam publicação nem apresentação.
+
+Revisão adicional de acessibilidade: [foco, formulário, iframe e evidências de teclado/contraste](docs/ACESSIBILIDADE.md).

@@ -79,8 +79,9 @@ mark {
   top:8px
 }
 :focus-visible {
-  outline:3px solid #7161d5;
-  outline-offset:5px
+  outline:3px solid #fff;
+  outline-offset:3px;
+  box-shadow:0 0 0 6px #001d21
 }
 .header {
   background:var(--ink);
@@ -126,7 +127,7 @@ mark {
 .nav a {
   font-size:0.8125rem;
   text-decoration:none;
-  padding:2px 0;
+  padding:8px 4px;
   color:#e7ebe6
 }
 .nav a[aria-current] {
@@ -238,7 +239,9 @@ mark {
   display:flex;
   justify-content:space-between;
   gap:16px;
-  text-shadow:0 1px 8px #000
+  background:#001d21;
+  padding:10px 14px;
+  border-radius:4px
 }
 .section {
   padding:96px 0
@@ -984,3 +987,13 @@ html.alto-contraste { --ink:#fff; --paper:#000; --sage:#111; --accent:#ffeb3b; -
 .alto-contraste * { transition:none!important; }
 .alto-contraste .pill:hover { background:#000; color:#ffeb3b; }
 @media print { .a11y-bar { display:none; } }
+
+/* Resumo de erros e alvos confortáveis para teclado e toque. */
+.footer-nav a { padding:6px 2px; }
+.check { padding:6px 0; }
+.form-errors { border:2px solid #9c2222; border-radius:4px; padding:20px; margin-bottom:28px; background:var(--paper); }
+.form-errors h3 { font-size:1.25rem; letter-spacing:normal; }
+.form-errors ul { margin:0; padding-left:24px; }
+.form-errors a { display:inline-block; padding:4px 0; }
+.alto-contraste .form-errors { border-color:#ffb3b3; }
+.alto-contraste :focus-visible { box-shadow:0 0 0 6px #000; }

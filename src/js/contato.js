@@ -5,6 +5,8 @@ const statusFormulario = document.querySelector('#demonstracao');
 const avisoRascunho = document.querySelector('#aviso-rascunho');
 const limpar = document.querySelector('#limpar-rascunho');
 const chaveRascunho = 'agrosustenta-rascunho';
+const resumoErros = document.querySelector('#resumo-erros');
+const listaErros = document.querySelector('#lista-erros');
 
 // Sem JS, os atributos HTML continuam fazendo a validação nativa.
 form.noValidate = true;
@@ -18,6 +20,21 @@ function mostrarErro(campo, mensagem) {
   } else {
     campo.removeAttribute('aria-invalid');
   }
+}
+
+// O resumo liga cada mensagem ao campo correspondente.
+function atualizarResumo() {
+  listaErros.textContent = '';
+  form.querySelectorAll('[aria-invalid="true"]').forEach((campo) => {
+    const item = document.createElement('li');
+    const link = document.createElement('a');
+    link.href = '#' + campo.id;
+    const rotulo = campo.labels[0].textContent.trim();
+    link.textContent = rotulo + ': ' + document.querySelector('#erro-' + campo.id).textContent;
+    item.appendChild(link);
+    listaErros.appendChild(item);
+  });
+  resumoErros.hidden = listaErros.children.length === 0;
 }
 
 function validar(campo) {
@@ -47,7 +64,8 @@ function salvarRascunho() {
   });
   try {
     localStorage.setItem(chaveRascunho, JSON.stringify(rascunho));
-    avisoRascunho.textContent = 'Rascunho salvo neste navegador. Use apenas dados fictícios.';
+    const mensagem = 'Rascunho salvo neste navegador. Use apenas dados fictícios.';
+    if (avisoRascunho.textContent !== mensagem) avisoRascunho.textContent = mensagem;
   } catch {
     avisoRascunho.textContent = 'O navegador não permitiu salvar o rascunho. Você ainda pode testar o formulário.';
   }
@@ -68,7 +86,10 @@ try {
 form.addEventListener('input', (event) => {
   statusFormulario.classList.remove('visible');
   if (campos.includes(event.target.id)) salvarRascunho();
-  if (event.target.hasAttribute('aria-invalid')) validar(event.target);
+  if (event.target.hasAttribute('aria-invalid')) {
+    validar(event.target);
+    atualizarResumo();
+  }
 });
 
 form.addEventListener('submit', (event) => {
@@ -78,13 +99,14 @@ form.addEventListener('submit', (event) => {
     const campo = document.getElementById(id);
     if (!validar(campo) && primeiroErro === null) primeiroErro = campo;
   });
-  statusFormulario.classList.add('visible');
+  atualizarResumo();
   if (primeiroErro) {
-    statusFormulario.textContent = 'Revise os campos indicados antes de continuar.';
-    primeiroErro.focus();
+    statusFormulario.classList.remove('visible');
+    resumoErros.focus();
     return;
   }
   salvarRascunho();
+  statusFormulario.classList.add('visible');
   statusFormulario.textContent = 'Demonstração concluída. Nada foi enviado. O rascunho permanece neste navegador para você continuar depois.';
   statusFormulario.focus();
 });
@@ -99,5 +121,6 @@ limpar.addEventListener('click', () => {
   form.reset();
   campos.concat('confirmacao').forEach((id) => mostrarErro(document.getElementById(id), ''));
   statusFormulario.classList.remove('visible');
+  atualizarResumo();
   document.querySelector('#nome').focus();
 });

@@ -9,7 +9,20 @@ controles.hidden = false;
 function atualizarBotoes() {
   contraste.setAttribute('aria-pressed', document.documentElement.classList.contains('alto-contraste'));
   texto.setAttribute('aria-pressed', document.documentElement.classList.contains('texto-ampliado'));
+  atualizarQuadro();
 }
+
+// O iframe local acompanha as preferências da página de mídia.
+function atualizarQuadro() {
+  const quadro = document.querySelector('#quadro-aprendizagem');
+  if (quadro && quadro.contentDocument) {
+    const raiz = quadro.contentDocument.documentElement;
+    raiz.classList.toggle('alto-contraste', document.documentElement.classList.contains('alto-contraste'));
+    raiz.classList.toggle('texto-ampliado', document.documentElement.classList.contains('texto-ampliado'));
+  }
+}
+const quadroLocal = document.querySelector('#quadro-aprendizagem');
+if (quadroLocal) quadroLocal.addEventListener('load', atualizarQuadro);
 
 function salvarPreferencias() {
   const preferencias = {

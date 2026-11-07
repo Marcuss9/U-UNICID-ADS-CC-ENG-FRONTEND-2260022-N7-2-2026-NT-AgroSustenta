@@ -57,3 +57,8 @@ Os prints de antes vêm da cópia exata da base consultada, servida separadament
 7. Após publicar, repetir na URL HTTPS e registrar o endereço no README e no orçamento.
 
 Ferramentas temporárias de verificação não são necessárias para executar o site. Nu Html Checker: https://validator.github.io/validator/. A auditoria automática utilizou axe-core; a reprodução e as interações foram verificadas no navegador.
+
+
+## Complemento: revisão de acessibilidade de 06/11/2026
+
+A revisão posterior à base 6da7993 melhorou foco, legenda, resumo de erros e preferências do iframe. A conferência de Tab foi ampliada às dez páginas: 369 controles visíveis alcançados, com retorno ao início sem prender o foco. Os contrastes dos elementos que a ferramenta deixou pendentes foram calculados e passaram de 4,5:1. Os registros anteriores permanecem históricos. Resultados completos, novos prints e limites: [ACESSIBILIDADE.md](ACESSIBILIDADE.md).

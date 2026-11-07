@@ -1,0 +1,156 @@
+{
+  "base": "6da7993",
+  "date": "2026-11-06",
+  "checks": [
+    {
+      "name": "Teclado nas dez páginas: todos os elementos visíveis alcançáveis, incluindo iframe",
+      "status": "pass"
+    },
+    {
+      "name": "Resumo de erros anunciado por foco, links por teclado e atualização após correção",
+      "status": "pass"
+    },
+    {
+      "name": "Contraste e ampliação também acompanham o iframe local",
+      "status": "pass"
+    },
+    {
+      "name": "Dez páginas em 320, 360, 768 e 1440 px, com texto padrão e ampliado",
+      "status": "pass"
+    },
+    {
+      "name": "Reflow em 720 e 360 px, sem confundir redimensionamento com zoom nativo",
+      "status": "pass"
+    },
+    {
+      "name": "Contraste medido dos elementos que ficaram pendentes na auditoria anterior",
+      "status": "pass"
+    }
+  ],
+  "keyboard": [
+    {
+      "page": "acessibilidade.html",
+      "expected": 32,
+      "reached": 32,
+      "returned": true,
+      "iframeLink": false,
+      "missing": []
+    },
+    {
+      "page": "contato.html",
+      "expected": 38,
+      "reached": 38,
+      "returned": true,
+      "iframeLink": false,
+      "missing": []
+    },
+    {
+      "page": "galeria.html",
+      "expected": 34,
+      "reached": 34,
+      "returned": true,
+      "iframeLink": false,
+      "missing": []
+    },
+    {
+      "page": "impacto.html",
+      "expected": 39,
+      "reached": 39,
+      "returned": true,
+      "iframeLink": false,
+      "missing": []
+    },
+    {
+      "page": "index.html",
+      "expected": 39,
+      "reached": 39,
+      "returned": true,
+      "iframeLink": false,
+      "missing": []
+    },
+    {
+      "page": "midia.html",
+      "expected": 36,
+      "reached": 36,
+      "returned": true,
+      "iframeLink": true,
+      "missing": []
+    },
+    {
+      "page": "noticias.html",
+      "expected": 34,
+      "reached": 34,
+      "returned": true,
+      "iframeLink": false,
+      "missing": []
+    },
+    {
+      "page": "orcamento_hospedagem.html",
+      "expected": 39,
+      "reached": 39,
+      "returned": true,
+      "iframeLink": false,
+      "missing": []
+    },
+    {
+      "page": "projetos.html",
+      "expected": 37,
+      "reached": 37,
+      "returned": true,
+      "iframeLink": false,
+      "missing": []
+    },
+    {
+      "page": "sobre.html",
+      "expected": 41,
+      "reached": 41,
+      "returned": true,
+      "iframeLink": false,
+      "missing": []
+    }
+  ],
+  "contrast": [
+    {
+      "file": "index.html",
+      "selector": ".hero-image figcaption",
+      "mode": "padrão",
+      "foreground": "rgb(255, 255, 255)",
+      "background": "rgb(0, 29, 33)",
+      "placeholder": null,
+      "ratio": 17.533503247635878,
+      "placeholderRatio": null
+    },
+    {
+      "file": "contato.html",
+      "selector": "#mensagem",
+      "mode": "padrão",
+      "foreground": "rgb(0, 29, 33)",
+      "background": "rgb(255, 255, 255)",
+      "placeholder": "rgb(84, 105, 102)",
+      "ratio": 17.533503247635878,
+      "placeholderRatio": 5.850469479215592
+    },
+    {
+      "file": "index.html",
+      "selector": ".hero-image figcaption",
+      "mode": "alto-contraste",
+      "foreground": "rgb(255, 255, 255)",
+      "background": "rgb(0, 29, 33)",
+      "placeholder": null,
+      "ratio": 17.533503247635878,
+      "placeholderRatio": null
+    },
+    {
+      "file": "contato.html",
+      "selector": "#mensagem",
+      "mode": "alto-contraste",
+      "foreground": "rgb(255, 255, 255)",
+      "background": "rgb(0, 0, 0)",
+      "placeholder": "rgb(221, 221, 221)",
+      "ratio": 21,
+      "placeholderRatio": 15.461102578439387
+    }
+  ],
+  "errors": [],
+  "pageErrors": []
+}

@@ -35,3 +35,10 @@ Resultados e evidências da verificação desta revisão: VALIDACAO.md. A versã
 ## Pendências de equipe e publicação
 
 A equipe deve informar RAs, confirmar a hospedagem/URL e o acesso do professor ao repositório privado. No histórico consultado não foi identificado commit de Cauã; a participação precisa ser registrada por contribuições reais, sem alterar a autoria histórica. A apresentação permanece fora desta revisão.
+
+
+## 06/11/2026 — Revisão adicional de acessibilidade
+
+A pedido do responsável, foram melhorados foco em fundos diferentes, área de interação dos menus, contraste da legenda, resumo de erros com links e sincronização do iframe com as preferências de leitura. A base desta etapa é o commit 6da7993, já presente na main.
+
+Foram alcançados 369 elementos por teclado nas dez páginas, conferidos os contrastes antes pendentes e executados testes de regressão, HTML/CSS e 20 auditorias automáticas. Evidências e limites em ACESSIBILIDADE.md. O JavaScript foi mantido simples e não foram acrescentadas dependências ao site.

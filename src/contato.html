@@ -54,6 +54,11 @@
 <p>A educação ambiental fica mais forte quando mais pessoas podem participar.</p>
 </div>
 <form id="contato-form" action="contato.html#demonstracao" method="get">
+<div id="resumo-erros" class="form-errors" role="region" aria-labelledby="titulo-erros" tabindex="-1" hidden>
+  <h3 id="titulo-erros">Confira os campos indicados</h3>
+  <p>Use os links para ir ao campo que precisa de correção.</p>
+  <ul id="lista-erros"></ul>
+</div>
 <fieldset>
 <legend>Teste uma mensagem</legend>
 <label for="nome">Nome <span>(obrigatório)</span></label><input id="nome" aria-describedby="erro-nome" type="text" required minlength="2" maxlength="100" autocomplete="name" placeholder="Ex.: Ana Silva">

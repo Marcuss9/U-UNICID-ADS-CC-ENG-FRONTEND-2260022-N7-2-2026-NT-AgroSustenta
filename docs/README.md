@@ -16,3 +16,5 @@
 `Escopo_Projeto_Fertilizantes_Sustentaveis_CJM.pdf`, `ATIVIDADE A2 PROJETO DE SITE FRONTEND.txt` e a evidência antiga em `evidencias/` permanecem preservados. O roteiro e a rubrica da segunda entrega enviados pelo responsável orientaram esta revisão. A antiga página `docs/orcamento_hospedagem.html` continua apontando para a atual.
 
 Referências preservadas desta revisão: [roteiro da segunda entrega](requisitos/roteiro_segunda_entrega.pdf) e [rubrica original sem preenchimento](requisitos/rubrica_segunda_entrega.xlsx).
+
+Revisão adicional: [acessibilidade, contraste e teclado](ACESSIBILIDADE.md).
