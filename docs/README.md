@@ -18,3 +18,5 @@
 Referências preservadas desta revisão: [roteiro da segunda entrega](requisitos/roteiro_segunda_entrega.pdf) e [rubrica original sem preenchimento](requisitos/rubrica_segunda_entrega.xlsx).
 
 Revisão adicional: [acessibilidade, contraste e teclado](ACESSIBILIDADE.md).
+
+Publicação confirmada: [serviço, URL e testes online](PUBLICACAO.md).

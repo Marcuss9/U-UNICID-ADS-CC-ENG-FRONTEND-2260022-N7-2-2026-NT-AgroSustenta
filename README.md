@@ -15,7 +15,8 @@ Equipe CJM. Professor Paulo Fratta. Os RAs ainda precisam ser informados pela eq
 ## Links e estado da entrega
 
 - Repositório: https://github.com/Marcuss9/U-UNICID-ADS-CC-ENG-FRONTEND-2260022-N7-2-2026-NT-AgroSustenta
-- URL pública do site: pendente de publicação e confirmação.
+- Site publicado: [https://marcuss9.github.io/U-UNICID-ADS-CC-ENG-FRONTEND-2260022-N7-2-2026-NT-AgroSustenta/](https://marcuss9.github.io/U-UNICID-ADS-CC-ENG-FRONTEND-2260022-N7-2-2026-NT-AgroSustenta/)
+- Hospedagem: GitHub Pages, com HTTPS e acesso sem login, conferido em 06/11/2026.
 - Revisão local: 06/11/2026, a partir do commit `55ef626b6f7029bf23289a7f799b54574b6f1a57` da branch main.
 - Apresentação e slides: fora desta etapa, a pedido do responsável.
 
@@ -67,11 +68,11 @@ O visual existente foi preservado: verde profundo, lavanda e fontes do sistema, 
 
 Railway não é obrigatório. Publique a pasta `src/` em um serviço de arquivos estáticos com HTTPS, sem comando de build. O domínio fornecido pelo serviço é suficiente; domínio próprio é opcional.
 
-- GitHub Pages: workflow manual em `.github/workflows/pages.yml`; conferir acesso e elegibilidade do repositório privado antes de usar.
+- GitHub Pages: serviço adotado. O repositório agora é público e o workflow manual está em `.github/workflows/pages.yml`. A publicação verificada corresponde à versão b932ab5.
 - Outro serviço estático: usar `src/` como pasta de publicação e conferir todas as rotas e mídias pela URL final.
 - Railway: configuração opcional preservada. Nesse caso, usar a raiz do repositório para o Dockerfile, Nginx e variável PORT. Não é necessário acrescentar banco.
 
-A preferência técnica é hospedagem estática, pois atende ao projeto com menos configuração. O provedor efetivo, o custo e a URL final devem ser registrados depois da escolha e da publicação. A simulação Railway do orçamento não é contratação nem custo da opção escolhida.
+O serviço adotado é GitHub Pages: hospeda a pasta src com HTTPS, integra-se ao repositório e dispensa servidor de aplicação. O endereço github.io atende à atividade; não há necessidade de domínio próprio. O Pages oferece hospedagem gratuita para repositórios públicos. A simulação Railway no orçamento permanece como comparação histórica, não como custo da hospedagem adotada. A decisão e os testes online estão em [PUBLICACAO.md](docs/PUBLICACAO.md).
 
 ## Documentação
 

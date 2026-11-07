@@ -5,16 +5,16 @@ Referência: roteiro e rubrica da segunda entrega. Data: 06/11/2026. Os resultad
 | Critério | Planejado | Entregue / evidência | Limite ou pendência |
 | --- | --- | --- | --- |
 | 1. JavaScript | Validar, persistir e interagir | contato.js e acessibilidade.js | Conferir testes da revisão |
-| 2. HTML e dez páginas | Navegação, semântica e zero erros HTML | Dez páginas principais; relatório do Nu Html Checker | Evidência local não prova publicação |
+| 2. HTML e dez páginas | Navegação, semântica e zero erros HTML | Dez páginas principais; relatório do Nu Html Checker | Páginas publicadas também conferidas; ver PUBLICACAO.md |
 | 3. CSS | Identidade, responsividade e transições | CSS compartilhado, rem, Grid/Flex e transições discretas | Larguras e zoom em VALIDACAO |
 | 4. Acessibilidade | Teclado, alt, foco, contraste e página própria | Controles de leitura, mensagens ARIA, Libras sob demanda e alternativas textuais | Leitor de tela humano e qualidade da tradução exigem revisão específica |
-| 5. Publicação | URL com HTTPS | Arquivos estáticos e instruções de hospedagem | Publicação e URL ainda não confirmadas |
+| 5. Publicação | URL com HTTPS | GitHub Pages ativo, dez páginas acessíveis e recursos principais conferidos | Evidências online em PUBLICACAO.md |
 | 6. ONG | Contato, apoio, notícias e multimídia | Formulário e voluntariado demonstrativos, apoio, notícias, vídeo, áudio e iframe | Não há operação real de ONG |
 | 7. Objetivos | Informar conceitos, impactos, dados e iniciativas com inclusão | sobre, impacto, projetos, noticias e acessibilidade | Resultado educativo não equivale a medição de impacto agrícola |
 | 8. IA | Documentação e revisão | USO_DE_IA e regras de contexto | Prompt original indisponível; reconstrução identificada |
 | 9. Evolução | Antes e depois dos problemas | MELHORIAS_MVP e evidências | Feedback formal do professor não fornecido |
 | 10. GitHub | Commits de todos, branch e PR | Histórico com 17 commits e dois PRs na base consultada | Commit de Cauã não identificado; nenhuma autoria foi fabricada |
-| 11. Documentação | README, diário, escopo, orçamento e testes | Índice docs/README.md | RAs, URL e evidências online dependem da equipe |
+| 11. Documentação | README, diário, escopo, orçamento e testes | Índice docs/README.md | URL e evidências online registradas; RAs ainda dependem da equipe |
 | 12. Sustentabilidade | Tema, fontes, ODS e participação | Conteúdo existente, seção ODS e apoio | Sem promessa de resultados reais |
 | 13 a 16. Apresentação | Slides, demonstração, domínio e tempo | Fora desta etapa por solicitação do responsável | Preparar depois |
 

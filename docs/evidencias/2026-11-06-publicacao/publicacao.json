@@ -1,0 +1,95 @@
+{
+  "date": "2026-11-06",
+  "url": "https://marcuss9.github.io/U-UNICID-ADS-CC-ENG-FRONTEND-2260022-N7-2-2026-NT-AgroSustenta/",
+  "sourceCommit": "b932ab5",
+  "pages": [
+    {
+      "file": "acessibilidade.html",
+      "status": 200,
+      "url": "https://marcuss9.github.io/U-UNICID-ADS-CC-ENG-FRONTEND-2260022-N7-2-2026-NT-AgroSustenta/acessibilidade.html",
+      "matchesReviewedSource": true
+    },
+    {
+      "file": "contato.html",
+      "status": 200,
+      "url": "https://marcuss9.github.io/U-UNICID-ADS-CC-ENG-FRONTEND-2260022-N7-2-2026-NT-AgroSustenta/contato.html",
+      "matchesReviewedSource": true
+    },
+    {
+      "file": "galeria.html",
+      "status": 200,
+      "url": "https://marcuss9.github.io/U-UNICID-ADS-CC-ENG-FRONTEND-2260022-N7-2-2026-NT-AgroSustenta/galeria.html",
+      "matchesReviewedSource": true
+    },
+    {
+      "file": "impacto.html",
+      "status": 200,
+      "url": "https://marcuss9.github.io/U-UNICID-ADS-CC-ENG-FRONTEND-2260022-N7-2-2026-NT-AgroSustenta/impacto.html",
+      "matchesReviewedSource": true
+    },
+    {
+      "file": "index.html",
+      "status": 200,
+      "url": "https://marcuss9.github.io/U-UNICID-ADS-CC-ENG-FRONTEND-2260022-N7-2-2026-NT-AgroSustenta/index.html",
+      "matchesReviewedSource": true
+    },
+    {
+      "file": "midia.html",
+      "status": 200,
+      "url": "https://marcuss9.github.io/U-UNICID-ADS-CC-ENG-FRONTEND-2260022-N7-2-2026-NT-AgroSustenta/midia.html",
+      "matchesReviewedSource": true
+    },
+    {
+      "file": "noticias.html",
+      "status": 200,
+      "url": "https://marcuss9.github.io/U-UNICID-ADS-CC-ENG-FRONTEND-2260022-N7-2-2026-NT-AgroSustenta/noticias.html",
+      "matchesReviewedSource": true
+    },
+    {
+      "file": "orcamento_hospedagem.html",
+      "status": 200,
+      "url": "https://marcuss9.github.io/U-UNICID-ADS-CC-ENG-FRONTEND-2260022-N7-2-2026-NT-AgroSustenta/orcamento_hospedagem.html",
+      "matchesReviewedSource": true
+    },
+    {
+      "file": "projetos.html",
+      "status": 200,
+      "url": "https://marcuss9.github.io/U-UNICID-ADS-CC-ENG-FRONTEND-2260022-N7-2-2026-NT-AgroSustenta/projetos.html",
+      "matchesReviewedSource": true
+    },
+    {
+      "file": "sobre.html",
+      "status": 200,
+      "url": "https://marcuss9.github.io/U-UNICID-ADS-CC-ENG-FRONTEND-2260022-N7-2-2026-NT-AgroSustenta/sobre.html",
+      "matchesReviewedSource": true
+    }
+  ],
+  "checks": [
+    {
+      "name": "Dez páginas com HTTPS, sem login e iguais à versão revisada",
+      "status": "pass"
+    },
+    {
+      "name": "Arquivos CSS, JS, legenda, iframe e mídias disponíveis no prefixo do repositório",
+      "status": "pass"
+    },
+    {
+      "name": "Formulário publicado: erros, confirmação, rascunho após recarregar e limpeza",
+      "status": "pass"
+    },
+    {
+      "name": "Preferências de contraste e texto mantidas entre páginas publicadas",
+      "status": "pass"
+    },
+    {
+      "name": "Vídeo e áudio publicados carregam; iframe acessível",
+      "status": "pass"
+    },
+    {
+      "name": "Página inicial publicada em celular, sem overflow",
+      "status": "pass"
+    }
+  ],
+  "errors": [],
+  "pageErrors": []
+}

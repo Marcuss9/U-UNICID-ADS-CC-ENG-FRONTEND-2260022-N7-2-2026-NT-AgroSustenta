@@ -62,3 +62,9 @@ Ferramentas temporárias de verificação não são necessárias para executar o
 ## Complemento: revisão de acessibilidade de 06/11/2026
 
 A revisão posterior à base 6da7993 melhorou foco, legenda, resumo de erros e preferências do iframe. A conferência de Tab foi ampliada às dez páginas: 369 controles visíveis alcançados, com retorno ao início sem prender o foco. Os contrastes dos elementos que a ferramenta deixou pendentes foram calculados e passaram de 4,5:1. Os registros anteriores permanecem históricos. Resultados completos, novos prints e limites: [ACESSIBILIDADE.md](ACESSIBILIDADE.md).
+
+## Publicação confirmada em 06/11/2026
+
+URL: https://marcuss9.github.io/U-UNICID-ADS-CC-ENG-FRONTEND-2260022-N7-2-2026-NT-AgroSustenta/
+
+A pendência anterior de publicação foi resolvida. As dez páginas e os recursos principais foram verificados em HTTPS, sem login, com formulário, persistência, preferências e mídia. A versão publicada conferida é b932ab5. Ver PUBLICACAO.md e evidencias/2026-11-06-publicacao/publicacao.json. Os testes locais anteriores permanecem como evidência histórica da implementação.

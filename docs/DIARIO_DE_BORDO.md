@@ -42,3 +42,7 @@ A equipe deve informar RAs, confirmar a hospedagem/URL e o acesso do professor a
 A pedido do responsável, foram melhorados foco em fundos diferentes, área de interação dos menus, contraste da legenda, resumo de erros com links e sincronização do iframe com as preferências de leitura. A base desta etapa é o commit 6da7993, já presente na main.
 
 Foram alcançados 369 elementos por teclado nas dez páginas, conferidos os contrastes antes pendentes e executados testes de regressão, HTML/CSS e 20 auditorias automáticas. Evidências e limites em ACESSIBILIDADE.md. O JavaScript foi mantido simples e não foram acrescentadas dependências ao site.
+
+## 06/11/2026 — Publicação informada e conferida
+
+O responsável forneceu a URL https://marcuss9.github.io/U-UNICID-ADS-CC-ENG-FRONTEND-2260022-N7-2-2026-NT-AgroSustenta/. O GitHub Pages está ativo e o repositório agora é público. A publicação b932ab5 foi conferida no navegador sem login: dez páginas e recursos principais disponíveis, formulário e preferências funcionando. README, entrega e aceite foram atualizados com a URL e as evidências online. Esta etapa foi documental, sem novo deploy.
