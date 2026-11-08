@@ -5,14 +5,14 @@
 | [Escopo final](ESCOPO_FINAL.md) | Complementa o escopo original para a segunda entrega |
 | [Objetivos e aceite](OBJETIVOS_E_ACEITE.md) | Planejado, entregue e pendências |
 | [Diário de bordo](DIARIO_DE_BORDO.md) | Cronologia verificável e decisões |
-| [Uso de IA](USO_DE_IA.md) | Origem do trabalho, prompt reconstruído e revisões |
+| [Uso de IA](USO_DE_IA.md) | Prompt inicial reconstruído, três exemplos propostos e revisão crítica; o diário registra o contexto |
 | [Melhorias da versão anterior](MELHORIAS_MVP.md) | Antes, depois e evidências |
 | [Validação atual](VALIDACAO.md) | Testes realmente executados e limites |
 | [Validação de 19/10](VALIDACAO_2026-10-19.md) | Registro histórico preservado |
 | [Fontes e créditos](FONTES.md) | Dados, imagens, ODS, Libras e áudio |
 | [Entrega](ENTREGA.md) | Arquivos e confirmações pendentes |
 | [Integrantes (modelo .txt)](../integrantes_equipe.txt) | Campos de RA a preencher na cópia submetida ao Blackboard |
-| [Orçamento](../src/orcamento_hospedagem.html) | Opções e premissas de hospedagem |
+| [Orçamento](../src/orcamento_hospedagem.html) | GitHub Pages adotado; alternativas Railway e Render, com fontes e limites |
 
 `Escopo_Projeto_Fertilizantes_Sustentaveis_CJM.pdf`, `ATIVIDADE A2 PROJETO DE SITE FRONTEND.txt` e a evidência antiga em `evidencias/` permanecem preservados. O roteiro e a rubrica da segunda entrega enviados pelo responsável orientaram esta revisão. A antiga página `docs/orcamento_hospedagem.html` continua apontando para a atual.
 

@@ -10,14 +10,15 @@ Pesquisa em 19/10/2026. Indicadores mantêm seus períodos originais; não são 
 | Inoculação e FBN | [Embrapa — Perguntas e respostas](https://www.embrapa.br/pt/tema-fixacao-biologica-de-nitrogenio/perguntas-e-respostas). Conteúdo sobre bactérias associadas à soja. Não generalizamos substituição de fertilizantes para todas as culturas. |
 | Notícia | [Embrapa — Uso de bioinsumos e soja no Paraná](https://www.embrapa.br/pt/agencia-de-noticias-embrapa/busca-de-noticias/-/noticia/107428047/uso-de-bioinsumos-eleva-em-mais-de-8-a-produtividade-da-soja-no-parana), **10/02/2026**. Chamada resumida com link original; sem promessa de desempenho universal. |
 | Railway | [Preços](https://railway.com/pricing), [Dockerfiles](https://docs.railway.com/builds/dockerfiles), [healthchecks](https://docs.railway.com/deployments/healthchecks). Hobby: mínimo de US$ 5/mês, com uso incluído e excedentes cobrados conforme consumo. |
-| GitHub Pages | [Documentação oficial](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages). Elegibilidade conforme plano e visibilidade do repositório. |
+| GitHub Pages | [Documentação oficial](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages). Elegibilidade conforme plano e visibilidade do repositório. Serviço adotado pelo AgroSustenta. |
+| Render | [Render — Static Sites](https://render.com/docs/static-sites), [modalidade gratuita](https://render.com/docs/free) e [FAQ](https://render.com/docs/faq). Consultados em **08/11/2026**. Sites estáticos gratuitos, sujeitos à franquia mensal de banda e minutos de pipeline; excedentes podem gerar cobrança ou restrições conforme a conta. **Alternativa pesquisada, não adotada.** |
 | Domínio | [Registro.br](https://registro.br/dominio/) é destino para consulta. O valor de R$ 50/ano do exemplo é **simulado**, não extraído dessa página. |
 
 ## Valores simulados
 
 - Horta Escola Raízes: iniciativa fictícia, 20 participantes e 4 oficinas. Não executada.
 - Cenário por hectare: receita R$ 6.000; fertilizantes R$ 1.200/R$ 1.000; análise e assistência R$ 100/R$ 250; demais custos R$ 3.000; saldos R$ 1.700/R$ 1.750. Todos simulados; receita constante é uma premissa para comparar custos. Sem previsão de lucro real.
-- Hospedagem compartilhada genérica R$ 20/mês; domínio R$ 50/ano; câmbio R$ 5,50/US$. Simulações, não cotações.
+- Domínio R$ 50/ano e câmbio R$ 5,50/US$ são **premissas simuladas**, não cotações. A antiga simulação de hospedagem compartilhada genérica a R$ 20/mês foi substituída por Render Static Site (alternativa gratuita dentro dos limites de uso).
 - Orçamento Railway: 12 × US$ 5 × R$ 5,50 + R$ 50 = R$ 380/ano. Combina preço de referência real com premissas simuladas; sem impostos, taxas e excedentes.
 - E-mail `contato@agrosustenta.example`: fictício, sem envio.
 
@@ -50,3 +51,7 @@ Fotografias disponibilizadas sob a [licença Unsplash](https://unsplash.com/lice
 A comparação de hospedagem preserva os preços históricos e as premissas simuladas já identificados na página. Não houve contratação, verificação atual de preço de planos nem alegação de disponibilidade de domínio nesta revisão.
 
 - Compatibilidade de vídeo: manejo.webm foi convertido diretamente do MP4 original com FFmpeg, preservando conteúdo e duração. O MP4 original permanece como alternativa.
+
+## Atualização de hospedagem — 08/11/2026
+
+A tabela de `src/orcamento_hospedagem.html` passou a comparar também o **Render Static Site**, consultado em fontes oficiais. A informação de gratuidade se refere à modalidade de site estático dentro das franquias disponíveis, **não** a um contrato ou implantação do AgroSustenta no Render. GitHub Pages continua adotado; os valores simulados do Railway e de domínio permanecem identificados como comparativos.

@@ -54,3 +54,9 @@ Segundo relato do responsável, o professor comentou na primeira entrega que as 
 A página pública de orçamento foi atualizada para indicar o **GitHub Pages como hospedagem efetivamente adotada**, com justificativa técnica e custo atual de R$ 0/ano para a configuração sem domínio próprio. Os custos simulados do Railway foram mantidos apenas como comparação. README, entrega e documentação foram alinhados ao estado atual. O workflow de publicação foi preparado para execuções automáticas quando houver push na main, além do acionamento manual.
 
 Permanecem pendentes para a equipe: preencher os RAs na cópia de envio, preparar os slides e o ZIP e registrar a contribuição real de Cauã. Nenhum desses itens futuros é apresentado como concluído.
+
+## 08/11/2026 — Exemplos de prompts para apresentação e alternativa Render
+
+A pedido do responsável, foram elaborados **três exemplos de prompts que poderiam ser utilizados** na criação do site: (1) estrutura das dez páginas, (2) formulário com validação e armazenamento local e (3) acessibilidade e preparação da publicação. Os textos completos e sua finalidade estão em [USO_DE_IA.md](USO_DE_IA.md). São **exemplos propostos para apresentação**, não três prompts originais comprovados; o relato histórico da implementação inicial permanece preservado.
+
+No comparativo de hospedagem, a linha fictícia de hospedagem compartilhada foi substituída por **Render — Static Site**, alternativa com deploy gratuito, HTTPS e limites de uso conforme documentação oficial consultada em 08/11/2026. **GitHub Pages permanece a opção efetivamente adotada**, sem mudança de serviço ou infraestrutura. Não há registro de implantação no Render.

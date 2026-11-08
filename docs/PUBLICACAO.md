@@ -16,7 +16,7 @@ O site utiliza arquivos estáticos HTML, CSS, JS e mídia. O GitHub Pages atende
 
 O GitHub disponibiliza Pages gratuitamente para repositórios públicos. Fonte oficial consultada em 06/11/2026: https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages.
 
-O comparativo de 19/10/2026 em src/orcamento_hospedagem.html permanece como registro histórico: naquele momento o repositório era privado e a publicação ainda estava sendo preparada. A opção efetivamente adotada agora é GitHub Pages para repositório público. O exemplo de R$ 380/ano do Railway não representa o custo desta opção.
+O comparativo de 19/10/2026 em src/orcamento_hospedagem.html permanece como registro histórico: naquele momento o repositório era privado e a publicação ainda estava sendo preparada. A opção efetivamente adotada agora é GitHub Pages para repositório público. O exemplo de R$ 380/ano do Railway não representa o custo desta opção. A comparação atualizada inclui também Render Static Site como alternativa com modalidade gratuita sujeita a limites de banda e pipeline, mas **não houve publicação no Render**. Consulte `FONTES.md` e a página de orçamento.
 
 ## Testes pela URL pública
 
