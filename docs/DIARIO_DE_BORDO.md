@@ -32,9 +32,9 @@ Decisão: preservar identidade visual e dez páginas, completando os itens da ru
 
 Resultados e evidências da verificação desta revisão: VALIDACAO.md. A versão anterior e a revisada são comparadas em MELHORIAS_MVP.md.
 
-## Pendências de equipe e publicação
+## Pendências da equipe (situação atualizada em 08/11/2026)
 
-A equipe deve informar RAs, confirmar a hospedagem/URL e o acesso do professor ao repositório privado. No histórico consultado não foi identificado commit de Cauã; a participação precisa ser registrada por contribuições reais, sem alterar a autoria histórica. A apresentação permanece fora desta revisão.
+A publicação e o acesso ao repositório deixaram de ser pendências: GitHub Pages está documentado em PUBLICACAO.md e o repositório está público. A equipe ainda precisa preencher os RAs na cópia de integrantes_equipe.txt para o Blackboard. Não foi identificado commit de Cauã até esta revisão; segundo o responsável, ele pretende subir o PDF dos slides em commit próprio. Essa participação só poderá ser considerada comprovada após a contribuição aparecer no histórico GitHub.
 
 
 ## 06/11/2026 — Revisão adicional de acessibilidade
@@ -46,3 +46,11 @@ Foram alcançados 369 elementos por teclado nas dez páginas, conferidos os cont
 ## 06/11/2026 — Publicação informada e conferida
 
 O responsável forneceu a URL https://marcuss9.github.io/U-UNICID-ADS-CC-ENG-FRONTEND-2260022-N7-2-2026-NT-AgroSustenta/. O GitHub Pages está ativo e o repositório agora é público. A publicação b932ab5 foi conferida no navegador sem login: dez páginas e recursos principais disponíveis, formulário e preferências funcionando. README, entrega e aceite foram atualizados com a URL e as evidências online. Esta etapa foi documental, sem novo deploy.
+
+## 08/11/2026 — Feedback do MVP e fechamento documental
+
+Segundo relato do responsável, o professor comentou na primeira entrega que as páginas estavam em um bom caminho, reconhecendo que havia melhorias a realizar. Não foi fornecido registro escrito detalhado desse feedback; ele é apresentado como relato, e não como citação literal do professor. Na evolução até a versão final, a equipe melhorou a acessibilidade (teclado, foco visível, alto contraste, texto ampliado, formulário e alternativas de mídia), além de implementar os requisitos de JavaScript.
+
+A página pública de orçamento foi atualizada para indicar o **GitHub Pages como hospedagem efetivamente adotada**, com justificativa técnica e custo atual de R$ 0/ano para a configuração sem domínio próprio. Os custos simulados do Railway foram mantidos apenas como comparação. README, entrega e documentação foram alinhados ao estado atual. O workflow de publicação foi preparado para execuções automáticas quando houver push na main, além do acionamento manual.
+
+Permanecem pendentes para a equipe: preencher os RAs na cópia de envio, preparar os slides e o ZIP e registrar a contribuição real de Cauã. Nenhum desses itens futuros é apresentado como concluído.

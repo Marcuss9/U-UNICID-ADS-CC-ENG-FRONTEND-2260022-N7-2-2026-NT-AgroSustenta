@@ -11,6 +11,7 @@
 | [Validação de 19/10](VALIDACAO_2026-10-19.md) | Registro histórico preservado |
 | [Fontes e créditos](FONTES.md) | Dados, imagens, ODS, Libras e áudio |
 | [Entrega](ENTREGA.md) | Arquivos e confirmações pendentes |
+| [Integrantes (modelo .txt)](../integrantes_equipe.txt) | Campos de RA a preencher na cópia submetida ao Blackboard |
 | [Orçamento](../src/orcamento_hospedagem.html) | Opções e premissas de hospedagem |
 
 `Escopo_Projeto_Fertilizantes_Sustentaveis_CJM.pdf`, `ATIVIDADE A2 PROJETO DE SITE FRONTEND.txt` e a evidência antiga em `evidencias/` permanecem preservados. O roteiro e a rubrica da segunda entrega enviados pelo responsável orientaram esta revisão. A antiga página `docs/orcamento_hospedagem.html` continua apontando para a atual.

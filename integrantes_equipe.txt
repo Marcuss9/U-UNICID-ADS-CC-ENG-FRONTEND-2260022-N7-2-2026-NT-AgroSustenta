@@ -1,0 +1,14 @@
+INTEGRANTES DA EQUIPE CJM — AGROSUSTENTA
+UNICID | Desenvolvimento Front-End | 2ª entrega — 2026
+Professor: Paulo Fratta
+
+1. João Pedro Liberato de Oliveira
+   RA: ______________________________
+
+2. Marcus Vinicius dos Santos Cruz
+   RA: ______________________________
+
+3. Cauã Francisco Gomes da Silva
+   RA: ______________________________
+
+ORIENTAÇÃO: Preencha os RAs na cópia destinada ao Blackboard. Este repositório é público; não é necessário publicar os números de matrícula no GitHub.

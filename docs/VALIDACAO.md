@@ -1,6 +1,6 @@
 # Validação da revisão de 06/11/2026
 
-Base: branch main no commit 55ef626b. Resultados desta revisão local, em Chromium 1193, sem frameworks ou dependências acrescentadas ao site. O registro anterior permanece em VALIDACAO_2026-10-19.md.
+Base dos testes locais: branch main no commit 55ef626b. Resultados da revisão local em Chromium 1193, sem frameworks ou dependências acrescentadas ao site. **Atualização de situação em 08/11/2026:** a publicação foi confirmada posteriormente no GitHub Pages; os registros de testes locais abaixo são históricos e não representam pendências atuais de deploy. O registro anterior permanece em VALIDACAO_2026-10-19.md.
 
 ## Resultados executados
 
@@ -38,7 +38,7 @@ Os prints de antes vêm da cópia exata da base consultada, servida separadament
 
 ## Limites e pendências
 
-- Os testes foram locais. Ainda é necessário escolher o serviço, publicar e verificar a URL real com HTTPS, incluindo acesso sem login. Nenhum deploy foi realizado.
+- Na etapa local descrita acima ainda não havia deploy. **Pendência resolvida em 06/11/2026:** a publicação via GitHub Pages, o acesso HTTPS sem login e as dez páginas estão registrados em PUBLICACAO.md. Isso não substitui uma nova conferência após futuras atualizações do site.
 - A navegação por teclado foi verificada nos caminhos descritos; não foi executado um ensaio humano de todos os links, controles nativos de mídia e recursos do tradutor em todas as páginas.
 - O axe deixou itens de inspeção manual registrados em incomplete, incluindo contraste sobre imagens e a avaliação do conteúdo do iframe. Zero violações automáticas não significa certificação WCAG. Não foi usado leitor de tela humano nem realizado teste com participantes PCD.
 - O reflow em 320 px foi verificado; não é uma alegação de teste de zoom nativo de 400% em todos os navegadores.
@@ -68,3 +68,7 @@ A revisão posterior à base 6da7993 melhorou foco, legenda, resumo de erros e p
 URL: https://marcuss9.github.io/U-UNICID-ADS-CC-ENG-FRONTEND-2260022-N7-2-2026-NT-AgroSustenta/
 
 A pendência anterior de publicação foi resolvida. As dez páginas e os recursos principais foram verificados em HTTPS, sem login, com formulário, persistência, preferências e mídia. A versão publicada conferida é b932ab5. Ver PUBLICACAO.md e evidencias/2026-11-06-publicacao/publicacao.json. Os testes locais anteriores permanecem como evidência histórica da implementação.
+
+## Nota de 08/11/2026 — Publicação após a atualização do orçamento
+
+O arquivo `src/orcamento_hospedagem.html` foi revisado para registrar a opção efetiva GitHub Pages, a justificativa técnica e o custo R$ 0/ano na configuração atual. O workflow de Pages foi preparado para publicar alterações da main. As evidências anteriores de 06/11/2026 continuam válidas para a versão b932ab5; a mudança de conteúdo de 08/11 exige nova verificação da publicação para confirmar que o conteúdo novo já está online.

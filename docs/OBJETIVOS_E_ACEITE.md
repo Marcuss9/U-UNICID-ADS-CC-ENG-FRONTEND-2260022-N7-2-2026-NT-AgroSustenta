@@ -37,9 +37,9 @@ Os itens abaixo retomam os requisitos do escopo e as funções acrescentadas pel
 
 ## Publicação e acesso ao repositório
 
-O endereço oficial para visitar e demonstrar o site é o GitHub Pages acima. A publicação do site e a visibilidade do repositório são questões distintas: não se adota repositório público como requisito acadêmico neste aceite. A orientação do responsável é manter o código privado e garantir ao professor o acesso necessário à avaliação.
+O endereço oficial para visitar e demonstrar o site é o GitHub Pages acima. **Em 08/11/2026, o repositório está público**, permitindo acesso à equipe e ao professor sem convite. Repositório público não é uma exigência acadêmica geral: o requisito é oferecer ao professor acesso ao código.
 
-O registro em PUBLICACAO.md descreve a situação observada na conferência de 06/11/2026; não comprova uma alteração posterior de visibilidade. Se a configuração de privacidade ou o plano da conta mudar, o endereço HTTPS deve ser conferido novamente para confirmar a continuidade da publicação.
+A escolha do GitHub Pages é documentada em PUBLICACAO.md e detalhada em `src/orcamento_hospedagem.html`: o site usa HTML/CSS/JS estáticos e, nesta configuração com domínio github.io e repositório público, não exige contratação de hospedagem ou domínio próprio. Se a visibilidade ou o plano mudar, revisar as condições do Pages e conferir a URL HTTPS novamente.
 
 ## Limites desta conclusão
 
