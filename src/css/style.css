@@ -1,4 +1,5 @@
 /* AgroSustenta: HTML/CSS estático. Referência editorial AngelList / Refero. */
+/* Tokens de cores e largura máxima compartilhados. */
 :root {
   --ink:#001d21;
   --paper:#f9f9f7;
@@ -8,6 +9,7 @@
   --muted:#43585a;
   --max:1280px
 }
+/* Box sizing uniforme para previsibilidade do layout. */
 * {
   box-sizing:border-box
 }
@@ -62,10 +64,12 @@ mark {
   color:var(--ink);
   padding:0 .06em
 }
+/* Contêiner central com largura responsiva. */
 .wrap {
   width:min(var(--max),calc(100% - 96px));
   margin-inline:auto
 }
+/* Link de salto acessível por teclado. */
 .skip {
   position:absolute;
   top:-100px;
@@ -78,11 +82,13 @@ mark {
 .skip:focus {
   top:8px
 }
+/* Destaque do foco para navegação sem mouse. */
 :focus-visible {
   outline:3px solid #fff;
   outline-offset:3px;
   box-shadow:0 0 0 6px #001d21
 }
+/* Cabeçalho compartilhado entre páginas. */
 .header {
   background:var(--ink);
   color:var(--paper)
@@ -115,6 +121,7 @@ mark {
   margin-left:auto;
   margin-right:28px
 }
+/* Menu principal; rota ativa identificada no HTML. */
 .nav {
   display:flex;
   align-items:center;
@@ -176,6 +183,7 @@ mark {
   line-height:1.5;
   margin:0 0 28px
 }
+/* Seção de destaque da página inicial. */
 .hero {
   background:var(--ink);
   color:var(--paper);
@@ -243,6 +251,7 @@ mark {
   padding:10px 14px;
   border-radius:4px
 }
+/* Espaçamento comum entre seções. */
 .section {
   padding:96px 0
 }
@@ -262,6 +271,7 @@ mark {
 .sage {
   background:var(--sage)
 }
+/* Grade reutilizável para cartões. */
 .grid {
   display:grid;
   gap:24px
@@ -449,6 +459,7 @@ details[open] summary {
   color:var(--muted);
   margin-top:24px
 }
+/* Rolagem local das tabelas em telas estreitas. */
 .table-scroll {
   overflow:auto;
   margin-bottom:24px
@@ -583,6 +594,7 @@ iframe {
   object-fit:cover;
   border-radius:240px 240px 4px 4px
 }
+/* Estilos do formulário demonstrativo. */
 .contact fieldset {
   border:0;
   padding:0;
@@ -630,6 +642,7 @@ input::placeholder,textarea::placeholder {
   flex-shrink:0;
   accent-color:var(--ink)
 }
+/* Estado de conclusão exibido pelo JavaScript ou âncora. */
 .form-status {
   display:none;
   background:var(--accent);
@@ -647,6 +660,7 @@ input::placeholder,textarea::placeholder {
 .budget h3 {
   margin-top:24px
 }
+/* Rodapé e navegação secundária. */
 .footer {
   background:var(--ink);
   color:var(--paper);
@@ -686,11 +700,13 @@ input::placeholder,textarea::placeholder {
 .footer-bottom p {
   margin:0
 }
+/* Ajuste de telas muito largas. */
 @media(min-width:1600px) {
   .hero h1 {
     font-size:7rem
   }
 }
+/* Ajuste de tablets e notebooks. */
 @media(max-width:1000px) {
   .wrap {
     width:calc(100% - 48px)
@@ -753,6 +769,7 @@ input::placeholder,textarea::placeholder {
     flex-wrap:wrap
   }
 }
+/* Ajuste de dispositivos móveis. */
 @media(max-width:600px) {
   .wrap {
     width:calc(100% - 40px)
@@ -901,6 +918,7 @@ input::placeholder,textarea::placeholder {
     padding:16px 14px
   }
 }
+/* Respeita a preferência por menos movimento. */
 @media(prefers-reduced-motion:reduce) {
   html {
     scroll-behavior:auto
@@ -910,6 +928,7 @@ input::placeholder,textarea::placeholder {
     transition:none!important
   }
 }
+/* Preserva informações com cores do sistema. */
 @media(forced-colors:active) {
   .pill,.tag {
     border:1px solid ButtonText
@@ -918,6 +937,7 @@ input::placeholder,textarea::placeholder {
     text-decoration:underline
   }
 }
+/* Configuração de impressão. */
 @media print {
   .header,.footer,.pill,.skip {
     display:none

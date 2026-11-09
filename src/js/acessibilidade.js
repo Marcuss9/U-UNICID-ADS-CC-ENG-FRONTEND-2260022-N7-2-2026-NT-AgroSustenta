@@ -1,3 +1,4 @@
+// Elementos compartilhados dos controles de leitura e Libras.
 const controles = document.querySelector('#controles-acessibilidade');
 const contraste = document.querySelector('#alto-contraste');
 const texto = document.querySelector('#texto-ampliado');
@@ -6,6 +7,7 @@ const aviso = document.querySelector('#aviso-acessibilidade');
 
 controles.hidden = false;
 
+/** Sincroniza aria-pressed com classes na raiz HTML. */
 function atualizarBotoes() {
   contraste.setAttribute('aria-pressed', document.documentElement.classList.contains('alto-contraste'));
   texto.setAttribute('aria-pressed', document.documentElement.classList.contains('texto-ampliado'));
@@ -13,6 +15,7 @@ function atualizarBotoes() {
 }
 
 // O iframe local acompanha as preferências da página de mídia.
+/** Replica preferências visuais no iframe educativo. */
 function atualizarQuadro() {
   const quadro = document.querySelector('#quadro-aprendizagem');
   if (quadro && quadro.contentDocument) {
@@ -24,6 +27,7 @@ function atualizarQuadro() {
 const quadroLocal = document.querySelector('#quadro-aprendizagem');
 if (quadroLocal) quadroLocal.addEventListener('load', atualizarQuadro);
 
+/** Persiste contraste e tamanho da fonte no localStorage. */
 function salvarPreferencias() {
   const preferencias = {
     contraste: contraste.getAttribute('aria-pressed') === 'true',
@@ -37,6 +41,7 @@ function salvarPreferencias() {
 }
 
 // As mesmas preferências acompanham a navegação pelas dez páginas.
+// Recupera preferências e trata armazenamento indisponível.
 try {
   const preferencias = JSON.parse(localStorage.getItem('agrosustenta-preferencias'));
   if (preferencias) {
@@ -48,12 +53,14 @@ try {
 }
 atualizarBotoes();
 
+// Alterna contraste, atualiza botão e salva preferência.
 contraste.addEventListener('click', () => {
   document.documentElement.classList.toggle('alto-contraste');
   atualizarBotoes();
   salvarPreferencias();
 });
 
+// Alterna ampliação de texto e mantém preferência.
 texto.addEventListener('click', () => {
   document.documentElement.classList.toggle('texto-ampliado');
   atualizarBotoes();
@@ -61,6 +68,7 @@ texto.addEventListener('click', () => {
 });
 
 // O tradutor oficial só é solicitado quando a pessoa ativa Libras.
+// Carrega VLibras somente após solicitação da pessoa usuária.
 libras.addEventListener('click', () => {
   libras.disabled = true;
   aviso.textContent = 'Carregando o VLibras. Este recurso precisa de internet.';

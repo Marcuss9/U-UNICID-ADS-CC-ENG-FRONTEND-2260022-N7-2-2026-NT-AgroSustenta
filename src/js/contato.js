@@ -1,3 +1,4 @@
+// Referências aos elementos do DOM utilizados pelo formulário.
 const form = document.querySelector('#contato-form');
 const campos = ['nome', 'email', 'assunto', 'mensagem'];
 const confirmacao = document.querySelector('#confirmacao');
@@ -12,6 +13,7 @@ const listaErros = document.querySelector('#lista-erros');
 form.noValidate = true;
 limpar.hidden = false;
 
+/** Exibe mensagem do campo e sincroniza aria-invalid. */
 function mostrarErro(campo, mensagem) {
   document.querySelector('#erro-' + campo.id).textContent = mensagem;
   campo.classList.toggle('campo-invalido', mensagem !== '');
@@ -23,6 +25,7 @@ function mostrarErro(campo, mensagem) {
 }
 
 // O resumo liga cada mensagem ao campo correspondente.
+/** Constrói lista de links para campos inválidos. */
 function atualizarResumo() {
   listaErros.textContent = '';
   form.querySelectorAll('[aria-invalid="true"]').forEach((campo) => {
@@ -37,6 +40,7 @@ function atualizarResumo() {
   resumoErros.hidden = listaErros.children.length === 0;
 }
 
+/** Aplica regras de validação específicas de cada campo. */
 function validar(campo) {
   let mensagem = '';
   const valor = campo.value.trim();
@@ -57,6 +61,7 @@ function validar(campo) {
   return mensagem === '';
 }
 
+/** Salva o rascunho em JSON no navegador, sem enviá-lo. */
 function salvarRascunho() {
   const rascunho = {};
   campos.forEach((id) => {
@@ -71,6 +76,7 @@ function salvarRascunho() {
   }
 }
 
+// Recupera rascunho local e trata possíveis falhas do armazenamento.
 try {
   const rascunho = JSON.parse(localStorage.getItem(chaveRascunho));
   if (rascunho && typeof rascunho === 'object') {
@@ -83,6 +89,7 @@ try {
   avisoRascunho.textContent = 'Não foi possível recuperar o rascunho. Preencha novamente os campos.';
 }
 
+// Salva alterações e revalida campos já sinalizados.
 form.addEventListener('input', (event) => {
   statusFormulario.classList.remove('visible');
   if (campos.includes(event.target.id)) salvarRascunho();
@@ -92,6 +99,7 @@ form.addEventListener('input', (event) => {
   }
 });
 
+// Intercepta o envio e mostra erros ou confirmação demonstrativa.
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   let primeiroErro = null;
@@ -111,6 +119,7 @@ form.addEventListener('submit', (event) => {
   statusFormulario.focus();
 });
 
+// Apaga rascunho e restaura campos, mensagens e foco.
 limpar.addEventListener('click', () => {
   try {
     localStorage.removeItem(chaveRascunho);
