@@ -92,6 +92,8 @@ if (controles && contraste && texto && libras && aviso) {
   let indice = 0;
   let sessao = 0;
   let lendo = false;
+  let pausado = false;
+  let falaAtual = null;
 
   function atualizarEstado(estado) {
     botaoLer.disabled = estado === 'lendo' || estado === 'pausado';
@@ -125,7 +127,7 @@ if (controles && contraste && texto && libras && aviso) {
       .flatMap(linha => dividirTexto(linha));
   }
   function falarProximo(id) {
-    if (id !== sessao || !lendo) return;
+    if (id !== sessao || !lendo || pausado) return;
     if (indice >= partes.length) {
       lendo = false;
       atualizarEstado('concluido');
@@ -133,15 +135,21 @@ if (controles && contraste && texto && libras && aviso) {
       return;
     }
     const fala = new SpeechSynthesisUtterance(partes[indice]);
+    falaAtual = fala;
     fala.lang = 'pt-BR';
     fala.onend = () => {
-      if (id !== sessao || !lendo) return;
+      if (id !== sessao || falaAtual !== fala) return;
+      falaAtual = null;
       indice += 1;
-      falarProximo(id);
+      // Alguns navegadores concluem um trecho mesmo após o comando de pausa.
+      // O próximo trecho só deve começar quando a leitura for retomada.
+      if (!pausado) falarProximo(id);
     };
     fala.onerror = evento => {
       if (id !== sessao) return;
       lendo = false;
+      pausado = false;
+      falaAtual = null;
       atualizarEstado('parado');
       aviso.textContent = evento.error === 'canceled'
         ? 'Leitura interrompida.'
@@ -157,6 +165,8 @@ if (controles && contraste && texto && libras && aviso) {
     }
     window.speechSynthesis.cancel();
     sessao += 1;
+    pausado = false;
+    falaAtual = null;
     partes = obterTexto();
     indice = 0;
     if (!partes.length) {
@@ -170,16 +180,23 @@ if (controles && contraste && texto && libras && aviso) {
     falarProximo(sessao);
   });
   botaoPausar.addEventListener('click', () => {
-    if (!('speechSynthesis' in window) || !lendo) return;
+    if (!vozDisponivel || !lendo || pausado) return;
+    // Conserva a sessão e a posição atual ao pausar.
+    pausado = true;
     window.speechSynthesis.pause();
-    lendo = false;
     atualizarEstado('pausado');
     aviso.textContent = 'Leitura pausada.';
   });
   botaoContinuar.addEventListener('click', () => {
-    if (!('speechSynthesis' in window) || !window.speechSynthesis.paused) return;
-    window.speechSynthesis.resume();
-    lendo = true;
+    if (!vozDisponivel || !lendo || !pausado) return;
+    pausado = false;
+    // Retoma a fala corrente; se ela terminou durante a pausa,
+    // prossegue diretamente para o próximo trecho.
+    if (window.speechSynthesis.paused) window.speechSynthesis.resume();
+    if (!falaAtual || (!window.speechSynthesis.speaking && !window.speechSynthesis.pending)) {
+      falaAtual = null;
+      falarProximo(sessao);
+    }
     atualizarEstado('lendo');
     aviso.textContent = 'Leitura continuada.';
   });
@@ -187,6 +204,8 @@ if (controles && contraste && texto && libras && aviso) {
     if ('speechSynthesis' in window) window.speechSynthesis.cancel();
     sessao += 1;
     lendo = false;
+    pausado = false;
+    falaAtual = null;
     partes = [];
     indice = 0;
     atualizarEstado('parado');
@@ -196,6 +215,8 @@ if (controles && contraste && texto && libras && aviso) {
     if ('speechSynthesis' in window) window.speechSynthesis.cancel();
     sessao += 1;
     lendo = false;
+    pausado = false;
+    falaAtual = null;
   });
 
   // O VLibras só é carregado quando a pessoa solicita o recurso.
