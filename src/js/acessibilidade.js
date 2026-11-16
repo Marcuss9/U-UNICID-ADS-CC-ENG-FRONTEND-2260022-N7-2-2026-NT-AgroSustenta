@@ -25,6 +25,7 @@ if (controles && contraste && texto && libras && aviso) {
   const quadroLocal = document.querySelector('#quadro-aprendizagem');
   if (quadroLocal) quadroLocal.addEventListener('load', atualizarQuadro);
 
+  // Salvando preferências no navegador
   function salvarPreferencias() {
     const preferencias = {
       contraste: contraste.getAttribute('aria-pressed') === 'true',
@@ -37,6 +38,7 @@ if (controles && contraste && texto && libras && aviso) {
     }
   }
 
+  //Recuperando as preferências salvas
   try {
     const preferencias = JSON.parse(localStorage.getItem('agrosustenta-preferencias'));
     if (preferencias) {
@@ -49,7 +51,7 @@ if (controles && contraste && texto && libras && aviso) {
   atualizarBotoes();
 
   contraste.addEventListener('click', () => {
-    document.documentElement.classList.toggle('alto-contraste');
+    document.documentElement.classList.toggle('alto-contraste'); //O método toggle() adiciona ou remove a classe alto-contraste
     atualizarBotoes();
     salvarPreferencias();
   });
@@ -60,12 +62,12 @@ if (controles && contraste && texto && libras && aviso) {
   });
 
   // Leitura opcional do conteúdo principal. Não substitui NVDA ou outro leitor de tela.
-  const grupoLeitura = document.createElement('div');
-  grupoLeitura.className = 'a11y-reading-controls';
-  grupoLeitura.setAttribute('role', 'group');
+  const grupoLeitura = document.createElement('div'); //cria um elemento HTML em memória.
+  grupoLeitura.className = 'a11y-reading-controls'; //define a classe CSS do elemento.
+  grupoLeitura.setAttribute('role', 'group'); //indica que esse elemento agrupa controles relacionados.
   grupoLeitura.setAttribute('aria-label', 'Controles de leitura em voz alta');
 
-  function criarBotao(rotulo) {
+  function criarBotao(rotulo) { //cria o botao html
     const botao = document.createElement('button');
     botao.type = 'button';
     botao.textContent = rotulo;
@@ -85,15 +87,15 @@ if (controles && contraste && texto && libras && aviso) {
     botaoLer.disabled = true;
     botaoLer.title = 'Leitura em voz alta indisponível neste navegador';
   }
-  controles.appendChild(grupoLeitura);
+  controles.appendChild(grupoLeitura); // insere o grupo de leitura dentro da barra de acessibilidade existente na página.
   if (!vozDisponivel) aviso.textContent = 'Leitura em voz alta não está disponível neste navegador.';
 
-  let partes = [];
-  let indice = 0;
-  let sessao = 0;
-  let lendo = false;
-  let pausado = false;
-  let falaAtual = null;
+  let partes = []; // Array com trechos do texto que serão narrados
+  let indice = 0; // Posição do próximo trecho
+  let sessao = 0; // Identificador da sessão de leitura
+  let lendo = false; // Indica que existe uma leitura ativa
+  let pausado = false; // Indica se a leitura está pausada
+  let falaAtual = null; // Guarda o objeto referente ao trecho atual
 
   function atualizarEstado(estado) {
     botaoLer.disabled = estado === 'lendo' || estado === 'pausado';
@@ -102,10 +104,10 @@ if (controles && contraste && texto && libras && aviso) {
     botaoParar.disabled = estado === 'parado' || estado === 'concluido';
   }
   function dividirTexto(texto, limite = 220) {
-    const palavras = texto.split(/\s+/);
+    const palavras = texto.split(/\s+/); // split() divide uma string em partes e retorna um array. Exemplo: ['Olá', 'mundo', 'JavaScript']
     const resultado = [];
     let atual = '';
-    for (const palavra of palavras) {
+    for (const palavra of palavras) { // for...of percorre os elementos de um array, um por vez.
       const proximo = atual ? atual + ' ' + palavra : palavra;
       if (proximo.length > limite && atual) {
         resultado.push(atual);
@@ -121,13 +123,13 @@ if (controles && contraste && texto && libras && aviso) {
     const principal = document.querySelector('main');
     if (!principal) return [];
     const textoPrincipal = principal.innerText || principal.textContent || '';
-    return textoPrincipal.split(/\n+/)
-      .map(linha => linha.replace(/\s+/g, ' ').trim())
+    return textoPrincipal.split(/\n+/) // split(/\n+/) separa o texto onde houver uma ou mais quebras de linha.
+      .map(linha => linha.replace(/\s+/g, ' ').trim()) // map() percorre cada linha e devolve uma nova versão transformada.
       .filter(Boolean)
-      .flatMap(linha => dividirTexto(linha));
+      .flatMap(linha => dividirTexto(linha)); //flatMap() executa a função dividirTexto() para cada linha e combina os arrays resultantes em um único array.
   }
   function falarProximo(id) {
-    if (id !== sessao || !lendo || pausado) return;
+    if (id !== sessao || !lendo || pausado) return; // A função não deve continuar quando a sessão informada não for a atual, quando não houver uma leitura ativa ou quando ela estiver pausada.
     if (indice >= partes.length) {
       lendo = false;
       atualizarEstado('concluido');
