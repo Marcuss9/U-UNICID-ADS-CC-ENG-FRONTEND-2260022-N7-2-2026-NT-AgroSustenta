@@ -80,7 +80,13 @@ if (controles && contraste && texto && libras && aviso) {
   botaoContinuar.disabled = true;
   botaoParar.disabled = true;
   grupoLeitura.append(botaoLer, botaoPausar, botaoContinuar, botaoParar);
+  const vozDisponivel = 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window;
+  if (!vozDisponivel) {
+    botaoLer.disabled = true;
+    botaoLer.title = 'Leitura em voz alta indisponível neste navegador';
+  }
   controles.appendChild(grupoLeitura);
+  if (!vozDisponivel) aviso.textContent = 'Leitura em voz alta não está disponível neste navegador.';
 
   let partes = [];
   let indice = 0;
@@ -94,7 +100,7 @@ if (controles && contraste && texto && libras && aviso) {
     botaoParar.disabled = estado === 'parado' || estado === 'concluido';
   }
   function dividirTexto(texto, limite = 220) {
-    const palavras = texto.split(/\\s+/);
+    const palavras = texto.split(/\s+/);
     const resultado = [];
     let atual = '';
     for (const palavra of palavras) {
@@ -113,8 +119,8 @@ if (controles && contraste && texto && libras && aviso) {
     const principal = document.querySelector('main');
     if (!principal) return [];
     const textoPrincipal = principal.innerText || principal.textContent || '';
-    return textoPrincipal.split(/\\n+/)
-      .map(linha => linha.replace(/\\s+/g, ' ').trim())
+    return textoPrincipal.split(/\n+/)
+      .map(linha => linha.replace(/\s+/g, ' ').trim())
       .filter(Boolean)
       .flatMap(linha => dividirTexto(linha));
   }
@@ -154,6 +160,7 @@ if (controles && contraste && texto && libras && aviso) {
     partes = obterTexto();
     indice = 0;
     if (!partes.length) {
+      atualizarEstado('parado');
       aviso.textContent = 'Não foi encontrado conteúdo principal para leitura.';
       return;
     }
@@ -187,6 +194,8 @@ if (controles && contraste && texto && libras && aviso) {
   });
   window.addEventListener('pagehide', () => {
     if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+    sessao += 1;
+    lendo = false;
   });
 
   // O VLibras só é carregado quando a pessoa solicita o recurso.
